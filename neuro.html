@@ -1,0 +1,466 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  
+@import "http://fonts.googleapis.com/css?family=Raleway";
+/*----------------------------------------------
+CSS settings for HTML div Exact Center
+------------------------------------------------*/
+.overall
+{
+  background-image:url("neuropi2.jpg");
+  width:1000px;
+  height:550px;
+  background-repeat: no-repeat;
+  background-size:800px 500px;
+}
+#abc {
+width:70%;
+height:100%;
+opacity:.95;
+margin-left:10%;
+overflow:auto;
+overflow:scroll;
+
+top:0;
+left:0;
+display:none;
+position:fixed;
+
+
+
+}
+
+
+
+
+img#close {
+position:absolute;
+right:-14px;
+top:-14px;
+cursor:pointer
+}
+
+/* div#popupContact {
+position:absolute;
+
+left:50%;
+top:17%;
+margin-left:-202px;
+font-family:'Raleway',sans-serif
+} */
+
+
+ form {
+/* max-width:300px;
+min-width:250px; */
+padding:10px 50px;
+border:2px solid gray;
+border-radius:10px;
+font-family:raleway;
+background-color:#fff;
+} 
+p {
+margin-top:30px
+}
+h2 {
+background-color:#989988;
+padding:20px 35px;
+margin:-10px -50px;
+text-align:center;
+border-radius:10px 10px 0 0
+}
+hr {
+margin:10px -50px;
+border:0;
+border-top:1px solid #ccc
+}
+/* input[type=text] {
+width:100%;
+padding:10px;
+margin-top:30px;
+border:1px solid #ccc;
+padding-left:40px;
+font-size:16px;
+font-family:raleway
+} */
+#name {
+background-image:url(../images/name.jpg);
+background-repeat:no-repeat;
+background-position:5px 7px
+}
+#email {
+background-image:url(../images/email.png);
+background-repeat:no-repeat;
+background-position:5px 7px
+}
+textarea {
+background-image:url(../images/msg.png);
+background-repeat:no-repeat;
+background-position:5px 7px;
+width:82%;
+height:95px;
+padding:10px;
+resize:none;
+margin-top:30px;
+border:1px solid #ccc;
+padding-left:40px;
+font-size:16px;
+font-family:raleway;
+margin-bottom:30px
+}
+#submit {
+text-decoration:none;
+width:30%;
+text-align:center;
+display:block;
+background-color:grey;
+color:#fff;
+border:1px solid #FFCB00;
+padding:10px 0;
+font-size:20px;
+cursor:pointer;
+border-radius:5px;
+
+
+}
+
+#neuro {
+text-decoration:none;
+width:30%;
+text-align:center;
+display:block;
+background-color:green;
+color:#fff;
+border:1px solid #FFCB00;
+padding:10px 0;
+font-size:20px;
+cursor:pointer;
+border-radius:5px;
+
+
+}
+#cancel{
+text-decoration:none;
+width:10%;
+text-align:center;
+display:block;
+background-color:grey;
+color:#fff;
+border:1px solid #FFCB00;
+padding:10px 0;
+font-size:20px;
+cursor:pointer;
+border-radius:5px;
+
+}
+.sub
+{
+    padding-left: 70%;
+  
+  
+}
+
+
+
+button {
+width:50%;
+height:45px;
+border-radius:5px;
+background-color:#2dbe40;
+color:#fff;
+font-family:'Raleway',sans-serif;
+font-size:18px;
+cursor:pointer
+}
+.one
+{
+    padding-left: 10%;
+    position: absolute;
+    
+}
+.two
+{
+    padding-left: 30%;
+    
+    position: relative;
+}
+
+
+
+</style>
+<title>Fill The Form</title>
+<link href="css/elements.css" rel="stylesheet">
+<script src="js/my_js.js">
+document.getElementById("some-id-here").href = 'taskvital.html';
+    document.getElementById("some-id-here").innerHTML = 'username here';
+    </script>
+</head>
+<!-- Body Starts Here -->
+<body id="body" style="overflow:hidden;">
+  <script>
+    
+// Validating Empty Field
+function check_empty() {
+if (document.getElementById('vitals').value == "" || document.getElementById('temp').value == "" || document.getElementById('pulse').value == "" || document.getElementById('sbp').value == "" || document.getElementById('DDp').value == "" || document.getElementById('RR').value == "" || document.getElementById('osat').value == ""|| document.getElementById('Fi0').value == "" || document.getElementById('PEEP').value == "" || document.getElementById('weight').value == "" || document.getElementById('height').value == ""|| document.getElementById('bmi').value == ""|| document.getElementById('avpu').value == ""|| document.getElementById('gcs').value == "")
+ {
+alert("Fill All Fields !");
+} else {
+document.getElementById('form').submit();
+alert("Form Submitted Successfully...");
+}
+}
+function div_show1() {
+document.getElementById('abc').style.display = "block";
+}
+//Function to Hide Popup
+function div_hide(){
+document.getElementById('abc').style.display = "none";
+}
+
+function div_show1() {
+document.getElementById('abc').style.display = "block";
+}
+//Function to Hide Popup
+function div_hide(){
+document.getElementById('abc').style.display = "none";
+}
+
+
+
+
+
+
+
+// Function To Display Popup
+function div_show() {
+document.getElementById('abc').style.display = "block";
+}
+//Function to Hide Popup
+function div_hide(){
+document.getElementById('abc').style.display = "none";
+}
+
+function div_show() {
+document.getElementById('abc').style.display = "block";
+}
+//Function to Hide Popup
+function div_hide(){
+document.getElementById('abc').style.display = "none";
+}
+
+//   </script>
+ <div id="abc"> 
+ <!-- Popup Div Starts Here -->
+<div id="popupContact">
+ <!-- Contact Us Form -->
+<form action="hello.html" id="form" method="post" name="form">
+<img id="close" src="" onclick ="div_hide()">
+<h2>Fill Form</h2>
+<hr>
+
+<div id="loginname">
+    <a id="some-id-here" href="hello.html">Login</a>
+</div>
+
+<div class="one">
+    <label for="">Date </label>
+    </div>
+    
+    
+    <div class="two">
+        <label for="">Time</label>
+        </div> 
+<label for="vitals"><b>vitals:</b></label>
+  <input id="vitals"  name="vi" type="text" >
+   <input type="text" id="vitals" name="vitals"><br><br>
+   <label for="Reaction L" >Reaction L:</label>
+   <select name="colors" >
+     <option value="lightblue"></option>
+     <option value="yellow">Yellow</option>
+     <option value="pink">Pink</option>
+     </select>
+     <br>
+     <br>
+     <label for="Reaction R" >Reaction R:</label>
+   <select name="colors" >
+     <option value="lightblue"></option>
+     
+     <option value="yellow">Yellow</option>
+     <option value="pink">Pink</option>
+     </select>
+     <br>
+     <br>
+    <label for="Equality">Equality:</label>
+   <select name="colors" >
+     <option value="lightblue"></option>
+     <option value="yellow">Yellow</option>
+     <option value="pink">Pink</option>
+     </select>
+     <br>
+     <br>
+     <label for="Size L">Size L:</label>
+   <select name="colors" >
+     <option value="lightblue"></option>
+     <option value="yellow">Yellow</option>
+     <option value="pink">Pink</option>
+     </select>
+     <br>
+     <br>
+     <label for="Size R">Size R:</label>
+   <select name="colors" >
+     <option value="lightblue"></option>
+     <option value="yellow">Yellow</option>
+     <option value="pink">Pink</option>
+     </select>
+     <br>
+     <br>
+     <label for="Eyes">Eyes:</label>
+   <select name="colors" >
+     <option value="lightblue"></option>
+     <option value="yellow">Yellow</option>
+     <option value="pink">Pink</option>
+     </select>
+     <br>
+     <br>
+     <label for="Verbal">Verbal:</label>
+   <select name="colors" >
+     <option value="lightblue"></option>
+     <option value="yellow">Yellow</option>
+     <option value="pink">Pink</option>
+     </select>
+     <br>
+     <br>
+     <label for="Motor">Motor:</label>
+   <select name="colors" >
+     <option value="lightblue"></option>
+     <option value="yellow">Yellow</option>
+     <option value="pink">Pink</option>
+     </select>
+     <br>
+     <br>
+     <label for="Movement Arms L">Movement Arms L:</label>
+   <select name="colors" >
+     <option value="lightblue"></option>
+     <option value="yellow">Yellow</option>
+     <option value="pink">Pink</option>
+     </select>
+     <br>
+     <br>
+     <label for="Movement Arms R">Movement Arms R:</label>
+   <select name="colors" >
+     <option value="lightblue"></option>
+     <option value="yellow">Yellow</option>
+     <option value="pink">Pink</option>
+     </select>
+     <br>
+     <br>
+     <label for="Legs R">Legs R:</label>
+   <select name="colors" >
+     <option value="lightblue"></option>
+     <option value="yellow">Yellow</option>
+     <option value="pink">Pink</option>
+     </select>
+     <br>
+     <br>
+     <label for="Legs L">Legs L:</label>
+   <select name="colors" >
+     <option value="lightblue"></option>
+     <option value="yellow">Yellow</option>
+     <option value="pink">Pink</option>
+     </select>
+     <br>
+     <br>
+     <label for="Strength Legs R">Strength Legs R:</label>
+   <select name="colors" >
+     <option value="lightblue"></option>
+     <option value="yellow">Yellow</option>
+     <option value="pink">Pink</option>
+     </select>
+     <br>
+     <br>
+     <label for="Strength Legs L">Strength Legs L:</label>
+   <select name="colors" >
+     <option value="lightblue"></option>
+     <option value="yellow">Yellow</option>
+     <option value="pink">Pink</option>
+     </select>
+     <br>
+     <br>
+     <label for="MAP">MAP:</label>
+   <select name="colors" >
+     <option value="lightblue"></option>
+     <option value="yellow">Yellow</option>
+     <option value="pink">Pink</option>
+     </select>
+     <br>
+     <br>
+     <label for="Siezure">Siezure:</label>
+   <select name="colors" >
+     <option value="lightblue"></option>
+     <option value="yellow">Yellow</option>
+     <option value="pink">Pink</option>
+     </select>
+     <br>
+     <br>
+     <label for="Duration">Duration:</label>
+     <input id="duration"  name="du" type="text" >mm
+    <br>
+     <br>
+     <label for="CSF Drainage">CSF Drainage:</label>
+     <input id="duration"  name="du" type="text" >ml
+     <br>
+     <br>
+     <label for="MAP">MAP:</label>
+     <input id="duration"  name="du" type="text" >mmhg
+     <br>
+     <br>
+     <label for="ICP">ICP:</label>
+     <input id="duration"  name="du" type="text" >mmhg
+     <br>
+     <br>
+     <label for="CPP">CPP:</label>
+     <input id="cpp"  name="cp" type="text" >mmhg
+     <br>
+     <br>
+     <label for="Cerebral 02">Cerebral 02:</label>
+     <input id="cerebral"  name="ce" type="text" >%
+     <br>
+     <br>
+     <label for="Cerebral Temp">Cerebral Temp:</label>
+     <input id="cerebralt"  name="cet" type="text" >&#8451;
+     <br>
+     <br>
+     
+     
+     
+
+
+  
+<div class="can">
+  <a href="" id="cancel">cancel</a>
+  </div>
+<div class="sub">
+<a href="hello.html" id="submit">Submit</a>
+</div>
+
+</form>
+</div>
+<!-- Popup Div Ends Here -->
+</div>
+<!-- Display Popup Button -->
+<center>
+  <div class="overall">
+<h1>Fill The Form</h1>
+
+
+<button id="popup" onclick="div_show()">fill neuro form</button>
+
+</div>
+</div>
+</center>
+</body>
+<!-- Body Ends Here -->
+</html>

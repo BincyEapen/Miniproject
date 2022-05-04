@@ -63,15 +63,20 @@ font-family:raleway;
 background-color:#fff;
 } 
 p {
-margin-top:30px
+margin-top:30px;
 }
-h2 {
+.bounce {
 background-color:#989988;
+
 padding:20px 35px;
 margin:-10px -50px;
-text-align:center;
-border-radius:10px 10px 0 0
+text-align:left;
+border-radius:10px 10px 0 0;
+
 }
+/* h6{
+  text-align:left;
+} */
 hr {
 margin:10px -50px;
 border:0;
@@ -111,9 +116,10 @@ font-size:16px;
 font-family:raleway;
 margin-bottom:30px
 }
-#submit {
+
+  #cancel {
 text-decoration:none;
-width:30%;
+width:110%;
 text-align:center;
 display:block;
 background-color:grey;
@@ -123,6 +129,9 @@ padding:10px 0;
 font-size:20px;
 cursor:pointer;
 border-radius:5px;
+
+
+
 
 
 }
@@ -142,9 +151,9 @@ border-radius:5px;
 
 
 }
-#cancel{
+#submit{
 text-decoration:none;
-width:10%;
+width:30%;
 text-align:center;
 display:block;
 background-color:grey;
@@ -155,13 +164,9 @@ font-size:20px;
 cursor:pointer;
 border-radius:5px;
 
+
 }
-.sub
-{
-    padding-left: 70%;
-  
-  
-}
+
 
 
 
@@ -177,16 +182,31 @@ cursor:pointer
 }
 .one
 {
-    padding-left: 10%;
+    padding-left:50%;
     position: absolute;
     
 }
 .two
 {
-    padding-left: 30%;
+    padding-left:80%;
     
     position: relative;
 }
+.start
+{
+  text-align: center;
+}
+.sub
+{
+  padding-left: 70%;
+  position: relative;
+}
+.can
+{
+  position: absolute;
+}
+
+
 
 
 
@@ -258,11 +278,12 @@ document.getElementById('abc').style.display = "none";
  <!-- Contact Us Form -->
 <form action="hello.html" id="form" method="post" name="form">
 <img id="close" src="" onclick ="div_hide()">
-<h2>Fill Form</h2>
+<div class="bounce"><b><h6></h6>Neuro vital-Bounce,David 81 M</h6></b>
+</div>
 <hr>
 
 <div id="loginname">
-    <a id="some-id-here" href="hello.html">Login</a>
+    <a id="some-id-here" href="hello.html"></a>
 </div>
 
 <div class="one">
@@ -273,178 +294,371 @@ document.getElementById('abc').style.display = "none";
     <div class="two">
         <label for="">Time</label>
         </div> 
-<label for="vitals"><b>vitals:</b></label>
-  <input id="vitals"  name="vi" type="text" >
-   <input type="text" id="vitals" name="vitals"><br><br>
-   <label for="Reaction L" >Reaction L:</label>
-   <select name="colors" >
-     <option value="lightblue"></option>
-     <option value="yellow">Yellow</option>
-     <option value="pink">Pink</option>
-     </select>
-     <br>
-     <br>
-     <label for="Reaction R" >Reaction R:</label>
-   <select name="colors" >
-     <option value="lightblue"></option>
-     
-     <option value="yellow">Yellow</option>
-     <option value="pink">Pink</option>
-     </select>
-     <br>
-     <br>
-    <label for="Equality">Equality:</label>
-   <select name="colors" >
-     <option value="lightblue"></option>
-     <option value="yellow">Yellow</option>
-     <option value="pink">Pink</option>
-     </select>
-     <br>
-     <br>
-     <label for="Size L">Size L:</label>
-   <select name="colors" >
-     <option value="lightblue"></option>
-     <option value="yellow">Yellow</option>
-     <option value="pink">Pink</option>
-     </select>
-     <br>
-     <br>
-     <label for="Size R">Size R:</label>
-   <select name="colors" >
-     <option value="lightblue"></option>
-     <option value="yellow">Yellow</option>
-     <option value="pink">Pink</option>
-     </select>
-     <br>
-     <br>
-     <label for="Eyes">Eyes:</label>
-   <select name="colors" >
-     <option value="lightblue"></option>
-     <option value="yellow">Yellow</option>
-     <option value="pink">Pink</option>
-     </select>
-     <br>
-     <br>
-     <label for="Verbal">Verbal:</label>
-   <select name="colors" >
-     <option value="lightblue"></option>
-     <option value="yellow">Yellow</option>
-     <option value="pink">Pink</option>
-     </select>
-     <br>
-     <br>
-     <label for="Motor">Motor:</label>
-   <select name="colors" >
-     <option value="lightblue"></option>
-     <option value="yellow">Yellow</option>
-     <option value="pink">Pink</option>
-     </select>
-     <br>
-     <br>
-     <label for="Movement Arms L">Movement Arms L:</label>
-   <select name="colors" >
-     <option value="lightblue"></option>
-     <option value="yellow">Yellow</option>
-     <option value="pink">Pink</option>
-     </select>
-     <br>
-     <br>
-     <label for="Movement Arms R">Movement Arms R:</label>
-   <select name="colors" >
-     <option value="lightblue"></option>
-     <option value="yellow">Yellow</option>
-     <option value="pink">Pink</option>
-     </select>
-     <br>
-     <br>
-     <label for="Legs R">Legs R:</label>
-   <select name="colors" >
-     <option value="lightblue"></option>
-     <option value="yellow">Yellow</option>
-     <option value="pink">Pink</option>
-     </select>
-     <br>
-     <br>
-     <label for="Legs L">Legs L:</label>
-   <select name="colors" >
-     <option value="lightblue"></option>
-     <option value="yellow">Yellow</option>
-     <option value="pink">Pink</option>
-     </select>
-     <br>
-     <br>
-     <label for="Strength Legs R">Strength Legs R:</label>
-   <select name="colors" >
-     <option value="lightblue"></option>
-     <option value="yellow">Yellow</option>
-     <option value="pink">Pink</option>
-     </select>
-     <br>
-     <br>
-     <label for="Strength Legs L">Strength Legs L:</label>
-   <select name="colors" >
-     <option value="lightblue"></option>
-     <option value="yellow">Yellow</option>
-     <option value="pink">Pink</option>
-     </select>
-     <br>
-     <br>
-     <label for="MAP">MAP:</label>
-   <select name="colors" >
-     <option value="lightblue"></option>
-     <option value="yellow">Yellow</option>
-     <option value="pink">Pink</option>
-     </select>
-     <br>
-     <br>
-     <label for="Siezure">Siezure:</label>
-   <select name="colors" >
-     <option value="lightblue"></option>
-     <option value="yellow">Yellow</option>
-     <option value="pink">Pink</option>
-     </select>
-     <br>
-     <br>
-     <label for="Duration">Duration:</label>
-     <input id="duration"  name="du" type="text" >mm
-    <br>
-     <br>
-     <label for="CSF Drainage">CSF Drainage:</label>
-     <input id="duration"  name="du" type="text" >ml
-     <br>
-     <br>
-     <label for="MAP">MAP:</label>
-     <input id="duration"  name="du" type="text" >mmhg
-     <br>
-     <br>
-     <label for="ICP">ICP:</label>
-     <input id="duration"  name="du" type="text" >mmhg
-     <br>
-     <br>
-     <label for="CPP">CPP:</label>
-     <input id="cpp"  name="cp" type="text" >mmhg
-     <br>
-     <br>
-     <label for="Cerebral 02">Cerebral 02:</label>
-     <input id="cerebral"  name="ce" type="text" >%
-     <br>
-     <br>
-     <label for="Cerebral Temp">Cerebral Temp:</label>
-     <input id="cerebralt"  name="cet" type="text" >&#8451;
-     <br>
-     <br>
-     
-     
-     
-
-
+        <div class="start">
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;&nbsp;
+          
+          
+          
+          
+<b>vitals:</b>
+  <input  type="date" >
+   <input type="time" ><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;
+   <label for="GCS" >Reaction L:</label>
   
-<div class="can">
-  <a href="" id="cancel">cancel</a>
-  </div>
-<div class="sub">
-<a href="hello.html" id="submit">Submit</a>
-</div>
+  <select>
+    <option value="lightblue"></option>
+    
+    <option value="yellow">Yellow</option>
+    <option value="pink">Pink</option>
+    </select><BR>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;
+    <label for="GCS" >Reaction R:</label>
+
+    
+  
+  <select name="colors" onchange="changeColor(this)">
+    <option value="lightblue"></option>
+    
+    <option value="yellow">Yellow</option>
+    <option value="pink">Pink</option>
+    </select>
+
+    <BR>
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;
+      
+    <label for="GCS" >Equality:</label>
+  
+  <select name="colors" onchange="changeColor(this)">
+    <option value="lightblue"></option>
+    
+    <option value="yellow">Yellow</option>
+    <option value="pink">Pink</option>
+    </select>
+
+    <BR>
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp; &nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      
+      
+    <label for="Size L:" >Size L:</label>
+  
+  <select name="colors" onchange="changeColor(this)">
+    <option value="lightblue"></option>
+    
+    <option value="yellow">Yellow</option>
+    <option value="pink">Pink</option>
+    </select>
+    <BR>
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      
+      
+      
+    <label for="Size R:" >Size R:</label>
+  
+  <select name="colors" onchange="changeColor(this)">
+    <option value="lightblue"></option>
+    
+    <option value="yellow">Yellow</option>
+    <option value="pink">Pink</option>
+    </select>
+
+    <BR>
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+      
+      
+    <label for="Size R:" >Eyes:</label>
+  
+  <select name="colors" onchange="changeColor(this)">
+    <option value="lightblue"></option>
+    
+    <option value="yellow">Yellow</option>
+    <option value="pink">Pink</option>
+    </select>
+    <BR>
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+      &nbsp;&nbsp;
+      
+      
+      
+    <label for="Size R:" >Verbal:</label>
+  
+  <select name="colors" onchange="changeColor(this)">
+    <option value="lightblue"></option>
+    
+    <option value="yellow">Yellow</option>
+    <option value="pink">Pink</option>
+    </select>
+    <BR>
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;
+      
+      
+    <label for="Size R:" >Motor:</label>
+  
+  <select name="colors" onchange="changeColor(this)">
+    <option value="lightblue"></option>
+    
+    <option value="yellow">Yellow</option>
+    <option value="pink">Pink</option>
+    </select>
+
+    <BR>
+      
+      
+    <label for="Size R:" >Movement Arms L:</label>
+  
+  <select name="colors" onchange="changeColor(this)">
+    <option value="lightblue"></option>
+    
+    <option value="yellow">Yellow</option>
+    <option value="pink">Pink</option>
+    </select>
+    <BR>
+      
+      
+    <label for="Size R:" >Movement Arms R:</label>
+  
+  <select name="colors" onchange="changeColor(this)">
+    <option value="lightblue"></option>
+    
+    <option value="yellow">Yellow</option>
+    <option value="pink">Pink</option>
+    </select>
+
+
+
+    <BR>
+      
+      
+    <label for="Size R:" >Movement Legs L:</label>
+  
+  <select name="colors" onchange="changeColor(this)">
+    <option value="lightblue"></option>
+    
+    <option value="yellow">Yellow</option>
+    <option value="pink">Pink</option>
+    </select>
+    <BR>
+      
+      
+    <label for="Size R:" >Movement Legs R:</label>
+  
+  <select name="colors" onchange="changeColor(this)">
+    <option value="lightblue"></option>
+    
+    <option value="yellow">Yellow</option>
+    <option value="pink">Pink</option>
+    </select>
+
+    <BR>
+
+      &nbsp;&nbsp;
+      
+      
+    <label for="Size R:" >Strength Arms L:</label>
+  
+  <select name="colors" onchange="changeColor(this)">
+    <option value="lightblue"></option>
+    
+    <option value="yellow">Yellow</option>
+    <option value="pink">Pink</option>
+    </select>
+
+    <BR>
+      
+      &nbsp;&nbsp;
+    <label for="Size R:" >Strength Arms R:</label>
+  
+  <select name="colors" onchange="changeColor(this)">
+    <option value="lightblue"></option>
+    
+    <option value="yellow">Yellow</option>
+    <option value="pink">Pink</option>
+    </select>
+
+
+    <BR>
+      &nbsp;&nbsp;&nbsp;
+      
+    <label for="Size R:" >Strength Legs L:</label>
+  
+  <select name="colors" onchange="changeColor(this)">
+    <option value="lightblue"></option>
+    
+    <option value="yellow">Yellow</option>
+    <option value="pink">Pink</option>
+    </select>
+
+    <BR>
+      &nbsp;&nbsp;&nbsp;
+      
+      <label for="Size R:" >Strength Legs R:</label>
+    
+    <select name="colors" onchange="changeColor(this)">
+      <option value="lightblue"></option>
+      
+      <option value="yellow">Yellow</option>
+      <option value="pink">Pink</option>
+      </select>
+
+
+      <BR>
+        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;
+      
+        <label for="Size R:" >Siezure:</label>
+      
+      <select name="colors" onchange="changeColor(this)">
+        <option value="lightblue"></option>
+        
+        <option value="yellow">Yellow</option>
+        <option value="pink">Pink</option>
+        </select>
+
+
+        <BR>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;
+      
+          Duration:
+          <input type ="text" name="">min
+          <br>
+
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp; &nbsp;
+          
+         CSF Drainage:
+          <input type ="text" name="">ml
+          <br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp; &nbsp;  &nbsp;
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp; 
+          
+          MAP:
+          <input type ="text" name="">mmHg
+
+          <br>
+
+
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp; &nbsp;
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp; &nbsp;   &nbsp;
+         ICP:
+          <input type ="text" name="">mmHg
+          <br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp; &nbsp;  &nbsp;
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp; 
+          CPP:
+          <input type ="text" name="">mmHg
+          <br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp; &nbsp;
+          
+          Cerebral 02:
+          <input type ="text" name="">%
+          <br>
+
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+          
+          
+
+          Cerebral Temp:
+          <input type ="text" name="">C
+      
+    
+  
+
+
+
+
+
+
+
+
+
+   
+     </div>
+
+
+     <hr>
+     
+     
+     
+
+<div class="last">
+  
+     <div class="can">
+      <a href="taskvital.html" id="cancel">cancel</a>
+      </div>
+     <div class="sub">
+    <a href="hello.html" id="submit">Submit</a>
+    </div>
+    </div>
 
 </form>
 </div>

@@ -1,777 +1,559 @@
 
+
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <style>
-  
-@import "http://fonts.googleapis.com/css?family=Raleway";
-/*----------------------------------------------
-CSS settings for HTML div Exact Center
-------------------------------------------------*/
 
-/* .x
-{
-  text-align: right;
-  
-  width:20px;
-  padding-left:90%;
+    <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-5/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="bootstrap-5/js/bootstrap.bundle.min.js"></script>
+    <script src="bootstrap-5/jquery.js"></script>
+    <style>
+
+
+.pad-top{
+            padding-top: 10px;
+        }
+        .clr{
+            background-color: rgb(203, 212, 212);
+        }
+        hr{
+            margin: 0;
+            padding: 0;
+        }
+        .modal-hd{
+            background-color: rgb(203, 212, 212);
+        }
+/* .pad-top{
+            padding-top: 10px;
+        }
+        .clr{
+            background-color: rgb(203, 212, 212);
+        }
+        hr{
+            margin: 0;
+            padding: 0;
+        }
+        
+
+      a{
+        background-color:antiquewhite;
+        text-decoration: none;
+        
+      }
+
+      h5{
+          background-color: beige;
+      }
+
+
+      .modal-hd{
+            background-color: rgb(203, 212, 212);
+        } */
+
+/* table, th, td {
+  border: 1px solid black;
 } */
-
-a{
-  float:right;
-  text-decoration: none;
-  background-color:#ccc;
-}
-.overall
-{
-  background-image:url("neuropi2.jpg");
-  width:1000px;
-  height:550px;
-  background-repeat: no-repeat;
-  background-size:800px 500px;
-}
-
-input[type=text], select {
-  width: 20%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing:border-box;
-}
-#abc {
-width:70%;
-height:100%;
-opacity:.95;
-margin-left:10%;
-
-overflow:scroll;
-
-top:0;
-left:0;
-display:none;
-position:fixed;
+        
+        .pad-top{
+            padding-top: 10px;
+        }
+        .clr{
+            background-color: rgb(203, 212, 212);
+        }
+        hr{
+            margin: 0;
+            padding: 0;
+        }
+        .md{
+            background-color: rgb(203, 212, 212);
+        }
 
 
 
+        /* fallback */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v128/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
 }
 
-
-
-
-img#close {
-position:absolute;
-right:-14px;
-top:-14px;
-cursor:pointer
+.add {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
 }
-
-/* div#popupContact {
-position:absolute;
-
-left:50%;
-top:17%;
-margin-left:-202px;
-font-family:'Raleway',sans-serif
-} */
-
-
-* {
-  box-sizing: border-box;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-ul li {
-  border: 3px ;
-  margin-top: -1px; /* Prevent double borders */
-  background-color:#ccc;
-  
-  
-  text-decoration: none;
-  font-size: 18px;
-  color: black;
-  display: block;
-  position: relative;
-}
-
-
-
-.close {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  right: 0%;
-  padding: 12px 16px;
-  transform: translate(0%, -50%);
-}
-
-.close:hover {background: #bbb;}
-
-form {
-/* max-width:300px;
-min-width:250px; */
-padding:10px 50px;
-border:2px solid gray;
-border-radius:10px;
-/* font-family:raleway; */
-background-color:#fff;
-height:1610px;
-} 
-p {
-margin-top:30px;
-}
-.bounce {
-background-color:#ccc;
-padding:1px;
-margin:-10px -50px;
-text-align:left;
-border-radius:10px 10px 0 0;
-}
-/* h6{
-  text-align:left;
-} */
-hr {
-margin:10px -50px;
-border:0;
-border-top:1px solid #ccc
-}
-/* input[type=text] {
-width:100%;
-padding:10px;
-margin-top:30px;
-border:1px solid #ccc;
-padding-left:40px;
-font-size:16px;
-font-family:raleway
-} */
-#name {
-background-image:url(../images/name.jpg);
-background-repeat:no-repeat;
-background-position:5px 7px
-}
-#email {
-background-image:url(../images/email.png);
-background-repeat:no-repeat;
-background-position:5px 7px
-}
-textarea {
-background-image:url(../images/msg.png);
-background-repeat:no-repeat;
-background-position:5px 7px;
-width:82%;
-height:95px;
-padding:10px;
-resize:none;
-margin-top:30px;
-border:1px solid #ccc;
-padding-left:40px;
-font-size:16px;
-font-family:raleway;
-margin-bottom:30px
-}
-
-  #submit{
-text-decoration:none;
-width:10%;
-text-align:center;
-display:block;
-background-color:grey;
-color:#fff;
-border:1px solid #FFCB00;
-height:40px;
-font-size:20px;
-cursor:pointer;
-border-radius:5px;
-text-align: center;
+         
+    </style>
+    <script>
 
 
 
 
-
-}
-#cancel
-{
-float:left;
-  background-color:grey;
-color:#fff;
-border:1px solid #FFCB00;
-display:block;
-text-align: center;
-width:80px;
-height:40px;
-font-size:20px;
-
-}
-
-#neuro {
-text-decoration:none;
-width:30%;
-text-align:center;
-display:block;
-background-color:green;
-color:#fff;
-border:1px solid #FFCB00;
-padding:10px 0;
-font-size:20px;
-cursor:pointer;
-border-radius:5px;
-
-
-}
-
-
-
-
-button {
-width:50%;
-height:45px;
-border-radius:5px;
-background-color:#989988;
-color:#fff;
-font-family:'Raleway',sans-serif;
-font-size:18px;
-cursor:pointer
-}
-.one
-{
-    padding-left:50%;
-    position: absolute;
-    
-}
-.two
-{
-    padding-left:80%;
-    
-    position: relative;
-}
-.start
-{
-  text-align: center;
-}
-/* .sub
-{
-  padding-left: 70%;
-  position: relative;
-}
-.can
-{
-  position: absolute;
-} */
-
-
-
-
-
-</style>
-<title>Fill The Form</title>
-<link href="css/elements.css" rel="stylesheet">
-<script src="js/my_js.js">
-document.getElementById("some-id-here").href = 'taskvital.html';
-    document.getElementById("some-id-here").innerHTML = 'username here';
+       
+       
     </script>
+    <title>Neuro Table</title>
 </head>
-<!-- Body Starts Here -->
-<body id="body" style="overflow:hidden;">
-  <script>
+<body>
+    <div class="container-fluid">
+        <!-- modal popup  -->
+        <div class="modal" id="modal1">
+            <div class="modal-dialog modal-xl modal-fullscreen-xl-down modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="m-hd p-1">
+                    <div class="modal-header rounded p-1 modal-hd">
+                        <h5 class="modal-title ps-2"><span id="dept"></span>Neuro Bounce,David 81 M</h5>
+                        <button class="btn pe-2 pt-0 pb-0 fw-bold" data-bs-dismiss="modal">X</button>
+                    </div>
+                </div>
+                    <div class="modal-body" >
+                        <div class="row">
+                            <div class="col"></div>
+                            <div class="col-4">
     
-// Validating Empty Field
-function check_empty() {
-if (document.getElementById('vitals').value == "" || document.getElementById('temp').value == "" || document.getElementById('pulse').value == "" || document.getElementById('sbp').value == "" || document.getElementById('DDp').value == "" || document.getElementById('RR').value == "" || document.getElementById('osat').value == ""|| document.getElementById('Fi0').value == "" || document.getElementById('PEEP').value == "" || document.getElementById('weight').value == "" || document.getElementById('height').value == ""|| document.getElementById('bmi').value == ""|| document.getElementById('avpu').value == ""|| document.getElementById('gcs').value == "")
- {
-alert("Fill All Fields !");
-} else {
-document.getElementById('form').submit();
-alert("Form Submitted Successfully...");
-}
-}
-function div_show1() {
-document.getElementById('abc').style.display = "block";
-}
-//Function to Hide Popup
-function div_hide(){
-document.getElementById('abc').style.display = "none";
-}
-
-function div_show1() {
-document.getElementById('abc').style.display = "block";
-}
-//Function to Hide Popup
-function div_hide(){
-document.getElementById('abc').style.display = "none";
-}
+                        <form action="" id="myForm">
+                        <!-- <div class="mx-auto" style="width: 400px;"> -->
+                        <table class="table table-borderless table-sm" id="tb">
+                            <tr>
+                                <td></td>
+                                <td>Date</td>
+                                <td>Time</td>
+                            </tr>
+                            <tr>
+                                <td class="text-end">Vital:</td>
+                                <td><input type="date" name="" id="" class="form-control"></td>
+                                <td><input type="time" name="" id="" class="form-control"></td>
+                            </tr>
+                            
 
 
-
-
-
-
-
-// Function To Display Popup
-function div_show() {
-document.getElementById('abc').style.display = "block";
-}
-//Function to Hide Popup
-function div_hide(){
-document.getElementById('abc').style.display = "none";
-}
-
-function div_show() {
-document.getElementById('abc').style.display = "block";
-}
-//Function to Hide Popup
-function div_hide(){
-document.getElementById('abc').style.display = "none";
-}
-
-//   </script>
- <div id="abc"> 
- <!-- Popup Div Starts Here -->
-<div id="popupContact">
- <!-- Contact Us Form -->
-<form action="hello.html" id="form" method="post" name="form">
-<img id="close" src="" onclick ="div_hide()">
-<div class="bounce"><b><h6></h6></h6></b>
-
-
-  <ul>
-    <b>Neuro vital-Bounce,David 81 M</b>
+                            
+                            <tr>
+                                <td class="text-end">Pulse:</td>
+                                <td><input type="text" class="form-control"></td>
+                                <td>BPM</td>
+                            </tr>
+                            <tr>
+                                <td class="text-end">S BP:</td>
+                                <td><input type="text" class="form-control"></td>
+                                <td>mmHg</td>
+                            </tr>
+                            <tr>
+                                <td class="text-end">D BP:</td>
+                                <td><input type="text" class="form-control"></td>
+                                <td>mmHg</td>
+                            </tr>
+                            <tr>
+                                <td class="text-end">RR:</td>
+                                <td><input type="text" class="form-control"></td>
+                                <td>BPM</td>
+                            </tr>
+                            <tr>
+                                <td class="text-end">O<sup>2</sup>Sat:</td>
+                                <td><input type="text" class="form-control"></td>
+                                <td>%</td>
+                            </tr>
+                            <tr>
+                                <td class="text-end">FiO<sup>2</sup>:</td>
+                                <td><input type="text" class="form-control"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="text-end">PEEP:</td>
+                                <td><input type="text" class="form-control"></td>
+                                <td>cmH<sub>2</sub>O</td>
+                            </tr>
+                            <tr>
+                                <td class="text-end">Weight:</td>
+                                <td><input type="text" class="form-control"></td>
+                                <td>Kg</td>
+                            </tr>
+                            <tr>
+                                <td class="text-end">Height:</td>
+                                <td><input type="text" class="form-control"></td>
+                                <td>cm</td>
+                            </tr>
+                            <tr>
+                                <td class="text-end">BMI:</td>
+                                <td><input type="text" class="form-control"></td>
+                                <td>Kg/m<sup>2</sup></td>
+                            </tr>
+                            <tr>
+                                <td class="text-end">AVPU:</td>
+                                <td>
+                                    <select name="" id="" class="form-select">
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value="">A</option>
+                                        <option value="">B</option>
+                                        <option value="">C</option>
+                                        <option value="">D</option>
+                                    </select>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="text-end">GCS:</td>
+                                <td>
+                                    <select name="" id="" class="form-select">
+                                      <option value=""></option>
+                                      <option value="">A</option>
+                                      <option value="">B</option>
+                                      <option value="">C</option>
+                                      <option value="">D</option>
+                                        
+                                    </select>
+                                </td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </form>
+                    <!-- </div> -->
+                </div>
+                <div class="col"></div>
+            </div>
     
-    <a href="taskvital.html"><b> &#10005;</b></a></span></li>
-  
-    
-  </ul>
+                    </div>
+                    <hr>
+                        <div class="clearfix">
+                            <span class="float-start p-3"><button class="btn clr" 
+                            id="cancel" onclick="document.getElementById('myForm').reset();">cancel</button></span>
+                           <a href="hello.html"> <span class="float-end p-3"><button class="btn clr">submit</button></span></a>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
 
-  
 
+
+
+
+
+
+
+
+       
+    </script>
+
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- modal popup  -->
+        <div class="modal" id="modal1">
+            <div class="modal-dialog modal-xl modal-fullscreen-xl-down modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="m-hd p-1">
+                    <div class="modal-header rounded p-1 m">
+
+
+                       
  
-  
-</div>
-<hr>
 
-<div id="loginname">
-    <a id="some-id-here" href="hello.html"></a>
-</div>
 
-<div class="one">
-    <b>Date</b>
+
+
+                        <h5 class="modal-title ps-2"><span id="de"></span></h5>
+                        <button class="btn pe-2 pt-0 pb-0 fw-bold" data-bs-dismiss="modal">X</button>
+                    </div>
+                </div>
+                    <div class="modal-body" >
+                        <div class="row">
+                            <div class="col"></div>
+                            <div class="col-4">
+    
+                        <form action="" id="top">
+                        <!-- <div class="mx-auto" style="width: 400px;"> -->
+                            <table>
+                                <h5 class="modal-title ps-2"><span id="dept">****</span>-Bounce,David 81 M</h5>
+                        <button class="btn pe-2 pt-0 pb-0 fw-bold" data-bs-dismiss="modal">X</button>
+                    </div>
+                </div>
+                    <div class="modal-body" >
+                        <div class="row">
+                            <div class="col"></div>
+                            <div class="col-4">
+    
+                        <form action="" id="myForm">
+                        <!-- <div class="mx-auto" style="width: 400px;"> -->
+                        <table class="table table-borderless table-sm" id="tb">
+                            <tr>
+                                <td></td>
+                                <td>Date</td>
+                                <td>Time</td>
+                            </tr>
+                            <tr>
+                                <td class="text-end">Vital:</td>
+                                <td><input type="date" name="" id="" class="form-control"></td>
+                                <td><input type="time" name="" id="" class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td class="text-end">Temp:</td>
+                                <td><input type="text" class="form-control"></td>
+                                <td>℃</td>
+                            </tr>
+                            <tr>
+                                <td class="text-end">Pulse:</td>
+                                <td><input type="text" class="form-control"></td>
+                                <td>BPM</td>
+                            </tr>
+                            <tr>
+                                <td class="text-end">S BP:</td>
+                                <td><input type="text" class="form-control"></td>
+                                <td>mmHg</td>
+                            </tr>
+                            <tr>
+                                <td class="text-end">D BP:</td>
+                                <td><input type="text" class="form-control"></td>
+                                <td>mmHg</td>
+                            </tr>
+                            <tr>
+                                <td class="text-end">RR:</td>
+                                <td><input type="text" class="form-control"></td>
+                                <td>BPM</td>
+                            </tr>
+                            <tr>
+                                <td class="text-end">O<sup>2</sup>Sat:</td>
+                                <td><input type="text" class="form-control"></td>
+                                <td>%</td>
+                            </tr>
+                            <tr>
+                                <td class="text-end">FiO<sup>2</sup>:</td>
+                                <td><input type="text" class="form-control"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="text-end">PEEP:</td>
+                                <td><input type="text" class="form-control"></td>
+                                <td>cmH<sub>2</sub>O</td>
+                            </tr>
+                            <tr>
+                                <td class="text-end">Weight:</td>
+                                <td><input type="text" class="form-control"></td>
+                                <td>Kg</td>
+                            </tr>
+                            <tr>
+                                <td class="text-end">Height:</td>
+                                <td><input type="text" class="form-control"></td>
+                                <td>cm</td>
+                            </tr>
+                            <tr>
+                                <td class="text-end">BMI:</td>
+                                <td><input type="text" class="form-control"></td>
+                                <td>Kg/m<sup>2</sup></td>
+                            </tr>
+                            <tr>
+                                <td class="text-end">AVPU:</td>
+                                <td>
+                                    <select name="" id="" class="form-select">
+                                        <option value="">--select--</option>
+                                        <option value="">Alert</option>
+                                        <option value="">Verbal</option>
+                                        <option value="">Pain</option>
+                                        <option value="">Unresponsive</option>
+                                    </select>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="text-end">GCS:</td>
+                                <td>
+                                    <select name="" id="" class="form-select">
+                                        <option value="">--select--</option>
+                                        <option value="">1</option>
+                                        <option value="">2</option>
+                                        <option value="">3</option>
+                                        <option value="">4</option>
+                                        <option value="">5</option>
+                                        <option value="">6</option>
+                                        <option value="">7</option>
+                                        <option value="">8</option>
+                                        <option value="">9</option>
+                                        <option value="">10</option>
+                                        <option value="">11</option>
+                                        <option value="">12</option>
+                                        <option value="">13</option>
+                                        <option value="">14</option>
+                                        <option value="">15</option>
+                                        
+                                    </select>
+                                </td>
+                                <td></td>
+                            </tr>
+                        </table>
+
+
+
+
+
+
+
+
+
+                                
+                                
+                                  
+                                </tr>
+                              </table>
+                                
+                                
+                               
+                               
+                                </td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </form>
+                    <!-- </div> -->
+                </div>
+                <div class="col"></div>
+            </div>
+    
+                    </div>
+                    <hr>
+                        <div class="clearfix">
+                          <a href="taskvital.html"><span class="float-start p-3"><button class="btn clr" 
+                            id="cancel" onclick="document.getElementById('top').reset();">cancel</button></span></a>
+                            <a href="hello.html"><span class="float-end p-3"><button class="btn clr">submit</button></span></a>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- pagination and date on top -->
+        <div class="clearfix">
+            <div class="float-end mt-2 pt-1"><span id="dt"></span></div>
+            <div class="float-end mt-2">
+                
+                </div>
+            
+        </div>
+
+    <!-- toggleable tab section-1 for vitals table and graphs -->
+
+
+
+    
+        <div>
+
+          <center>
+            
+
+
+    
+
+                  </center>
+                </li>
+            </ul>
+
+          
+
+            <div>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="general" 
+                    role="tabpanel" aria-labelledby="general-tab">
+                    <button id="general-btn" class="btn border mt-2 pb-0" 
+                    style="margin-left: 20px;" 
+                    data-bs-toggle="modal" data-bs-target="#modal1">
+                    <i class="add ">add</i></button>
+                </div>
+                    <div class="tab-pane fade" id="cardiac" 
+                    role="tabpanel" aria-labelledby="cardiac-tab">
+                    <button id="cardiac-btn" class="btn border mt-2 pb-0" 
+                    style="margin-left: 112px;" 
+                    data-bs-toggle="modal" data-bs-target="#modal1">
+                    <i class="add">add</i></button>
+                </div>
+                    <div class="tab-pane fade" id="respiratory" 
+                    role="tabpanel" aria-labelledby="respiratory-tab">
+                    <button id="respiratory-btn" class="btn border mt-2 pb-0" 
+                    style="margin-left: 220px;" 
+                    data-bs-toggle="modal" data-bs-target="#modal1">
+                    <i class="add ">add</i></button>
+                </div>
+                    <div class="tab-pane fade" id="neuro" 
+                    role="tabpanel" aria-labelledby="neuro-tab">
+                    <button id="neuro-btn" class="btn border mt-2 pb-0" 
+                    style="margin-left: 320px;" 
+                    data-bs-toggle="modal" data-bs-target="#modal1">
+                    <i class="add">add</i></button>
+                </div>
+                  </div>
+            </div>
+
+        </div>
+        
     </div>
-    
-    
-    <div class="two">
-        <b>Time</b>
-        </div> 
 
-
-        <center>
-          <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
-      
-      
-          
-          
-    
-      
-          
         
-      
-    
-         
-          
-         
-    
-        <div class="start">
-
-          &nbsp;
-          &nbsp;
-          &nbsp;
-          &nbsp;
-          &nbsp;
-          &nbsp;
-          &nbsp;
-          &nbsp;
-          &nbsp;
-          &nbsp;
-          &nbsp;
-          &nbsp;
-          &nbsp;
-          &nbsp;
-          &nbsp;
-          &nbsp;
-          &nbsp;
-          &nbsp;
-          &nbsp;
-          &nbsp;
-          &nbsp;
-          &nbsp;
-          &nbsp;
-          &nbsp;
-          &nbsp;
-          &nbsp;
-          &nbsp;
-          &nbsp;
-          &nbsp;
-          &nbsp;&nbsp;
-          
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          
-          
-          <b>vitals</b>:<input type="text" id="fname" name="firstname" >
-  
-     
-          <input type="text" id="lname" name="lastname" ><br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      
-   <b >Reaction L:</b>
-  
-  <select>
-    <option value="lightblue"></option>
-    
-    <option value="yellow">Yellow</option>
-    <option value="pink">Pink</option>
-    </select><BR>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;
-    <b >Reaction R:</b>
-
-    
-  
-  <select name="colors" onchange="changeColor(this)">
-    <option value="lightblue"></option>
-    
-    <option value="yellow">Yellow</option>
-    <option value="pink">Pink</option>
-    </select>
-
-    <BR>
-      &nbsp;
-      &nbsp;
-      &nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;
-      
-    <b>Equality:</b>
-  
-  <select name="colors" onchange="changeColor(this)">
-    <option value="lightblue"></option>
-    
-    <option value="yellow">Yellow</option>
-    <option value="pink">Pink</option>
-    </select>
-
-    <BR>
-      &nbsp;
-      &nbsp;
-      &nbsp;
-      &nbsp;
-      &nbsp; &nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;
-      
-      
-    <b >Size L:</b>
-  
-  <select name="colors" onchange="changeColor(this)">
-    <option value="lightblue"></option>
-    
-    <option value="yellow">Yellow</option>
-    <option value="pink">Pink</option>
-    </select>
-    <BR>
-      &nbsp;
-      &nbsp;
-      &nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      
-      
-      
-    <b>Size R:</b>
-  
-  <select name="colors" onchange="changeColor(this)">
-    <option value="lightblue"></option>
-    
-    <option value="yellow">Yellow</option>
-    <option value="pink">Pink</option>
-    </select>
-
-    <BR>
-      &nbsp;
-      &nbsp;
-      &nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-      &nbsp;&nbsp;&nbsp;
-      
-    <b >Eyes:</b>
-  
-  <select name="colors" onchange="changeColor(this)">
-    <option value="lightblue"></option>
-    
-    <option value="yellow">Yellow</option>
-    <option value="pink">Pink</option>
-    </select>
-    <BR>&nbsp;&nbsp;&nbsp;
-      &nbsp;
-      &nbsp;
-      &nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
-      &nbsp;&nbsp;
-      
-      
-      
-    <b >Verbal:</b>
-  
-  <select name="colors" onchange="changeColor(this)">
-    <option value="lightblue"></option>
-    
-    <option value="yellow">Yellow</option>
-    <option value="pink">Pink</option>
-    </select>
-    <BR>&nbsp;&nbsp;&nbsp;
-      &nbsp;
-      &nbsp;
-      &nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;
-      
-      
-    <b>Motor:</b>
-  
-  <select name="colors" onchange="changeColor(this)">
-    <option value="lightblue"></option>
-    
-    <option value="yellow">Yellow</option>
-    <option value="pink">Pink</option>
-    </select>
-
-    <BR>
-      &nbsp;&nbsp;&nbsp;
-      
-      
-    <b>Movement Arms L:</b>
-  
-  <select name="colors" onchange="changeColor(this)">
-    <option value="lightblue"></option>
-    
-    <option value="yellow">Yellow</option>
-    <option value="pink">Pink</option>
-    </select>
-    <BR>&nbsp;&nbsp;&nbsp;&nbsp;
-      
-      
-    <b >Movement Arms R:</b>
-  
-  <select name="colors" onchange="changeColor(this)">
-    <option value="lightblue"></option>
-    
-    <option value="yellow">Yellow</option>
-    <option value="pink">Pink</option>
-    </select>
-
-
-
-    <BR>
-      
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <b >Movement Legs L:</b>
-  
-  <select name="colors" onchange="changeColor(this)">
-    <option value="lightblue"></option>
-    
-    <option value="yellow">Yellow</option>
-    <option value="pink">Pink</option>
-    </select>
-    <BR>
-      &nbsp;&nbsp;&nbsp;
-      
-      
-    <b >Movement Legs R:</b>
-  
-  <select name="colors" onchange="changeColor(this)">
-    <option value="lightblue"></option>
-    
-    <option value="yellow">Yellow</option>
-    <option value="pink">Pink</option>
-    </select>
-
-    <BR>
-
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      
-      
-    <b >Strength Arms L:</b>
-  
-  <select name="colors" onchange="changeColor(this)">
-    <option value="lightblue"></option>
-    
-    <option value="yellow">Yellow</option>
-    <option value="pink">Pink</option>
-    </select>
-
-    <BR>
-      
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <b >Strength Arms R:</b>
-  
-  <select name="colors" onchange="changeColor(this)">
-    <option value="lightblue"></option>
-    
-    <option value="yellow">Yellow</option>
-    <option value="pink">Pink</option>
-    </select>
-
-
-    <BR>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      
-    <b >Strength Legs L:</b>
-  
-  <select name="colors" onchange="changeColor(this)">
-    <option value="lightblue"></option>
-    
-    <option value="yellow">Yellow</option>
-    <option value="pink">Pink</option>
-    </select>
-
-    <BR>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      
-      <b>Strength Legs R:</b>
-    
-    <select name="colors" onchange="changeColor(this)">
-      <option value="lightblue"></option>
-      
-      <option value="yellow">Yellow</option>
-      <option value="pink">Pink</option>
-      </select>
-
-
-      <BR>
-        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;
-      
-        <b >Siezure:</b>
-      
-      <select name="colors" onchange="changeColor(this)">
-        <option value="lightblue"></option>
         
-        <option value="yellow">Yellow</option>
-        <option value="pink">Pink</option>
-        </select>
-
-
-        <BR>&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          
-      
-          <b>Duration:</b>
-          <input type ="text" name="">&nbsp;&nbsp;<b>min</b>
-          <br>
-
-          
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          
-        <b> CSF Drainage:</b>
-          <input type ="text" name="">&nbsp;&nbsp;<b>ml</b>
-          <br>
-          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          
-          <b>MAP:</b>
-          <input type ="text" name="">&nbsp;&nbsp;<b>mmHg</b>
-
-          <br>
-
-
-          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;
-
-         <b>ICP:</b>
-          <input type ="text" name="">&nbsp;&nbsp;<b>mmHg</b>
-          <br>
-          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <b>CPP:</b>
-          <input type ="text" name="">&nbsp;&nbsp;<b>mmHg</b>
-          <br>
-          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;
-          <b>Cerebral 02:</b>
-          <input type ="text" name="">&nbsp;&nbsp;<b>%</b>
-          <br>
-
-          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          
-
-          <b>Cerebral Temp:</b>
-          <input type ="text" name="">&nbsp;&nbsp;<b>&#8451;</b>
-      
     
-  
+    </div>
 
 
 
 
-
-
-
-
-
-   
-     </div>
-
-
-     <hr>
-     
-     
-     
-
-
-    
-    
-
-     <div class="last">
-  
-      <div class="can">
-       <a href="hello.html" id="submit">submit</a>
-       </div>
-      <div class="sub">
-     <a href="taskvital.html" id="cancel">cancel</a>
-     </div>
-     </div>
-
-
-</form>
-</div>
-<!-- Popup Div Ends Here -->
-</div>
-<!-- Display Popup Button -->
+    <hr>
 <center>
-  <div class="overall">
-<h1>Fill The Form</h1>
 
 
-<button id="popup" onclick="div_show()">fill neuro form</button>
-
-</div>
-</div>
 </center>
+    
+    <script>
+        // display date
+        let dt = new Date();
+        let mth = () =>{
+            if(dt.getMonth()<10){
+                return "0" +(dt.getMonth()+1);
+            }
+        }
+        let dat = () =>{
+            if(dt.getDate()<10){
+                return "0"+(dt.getDate());
+            }
+        }
+        document.getElementById("dt").innerHTML = dat() + "/" +mth() + "/" + dt.getFullYear();
+    </script>
+    <script>
+        
+
+        $(document).ready(function(){
+            $(".container-fluid").click(function(){
+                $("ul > li >button.active").removeClass("mt-2 text-secondary");
+                $("ul > li >button.active").addClass("pt-3 text-dark");
+                $("ul > li >button:not(.active)").removeClass("pt-3 text-dark");
+                $("ul > li >button:not(.active)").addClass("mt-2 text-secondary");
+
+            })
+            $("ul > li >button.active").removeClass("mt-2 text-secondary");
+            $("ul > li >button.active").addClass("pt-3 text-dark");
+                
+        
+        });
+
+    </script>
+
+    <a href="taskvital.html">cancel</a>
 </body>
-<!-- Body Ends Here -->
 </html>

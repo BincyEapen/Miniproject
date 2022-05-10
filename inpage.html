@@ -16,7 +16,25 @@
     <script src="bootstrap-5/js/bootstrap.bundle.min.js"></script>
     <script src="bootstrap-5/jquery.js"></script>
     <style>
-.pad-top{
+        table
+        {
+        width: 100%;
+        padding:55px;
+        }
+        td, th,td 
+         {
+        border: 1px solid #dddddd;
+         }
+        tr,td
+        {
+           border: 1px solid #dddddd;
+           
+        }
+        tr.noBorder th 
+          {
+             border: 0;
+           }
+        .pad-top{
             padding-top: 10px;
         }
         .clr{
@@ -30,624 +48,640 @@
             background-color: rgb(203, 212, 212);
         }
      
-@font-face {
-  font-family: 'Material Icons';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/materialicons/v128/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
-}
+        @font-face 
+        {
 
-.add {
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
-  display: inline-block;
-  white-space: nowrap;
-  word-wrap: normal;
-  direction: ltr;
-  -webkit-font-smoothing: antialiased;
-}
 
-.add1 {
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
-  display: inline-block;
-  white-space: nowrap;
-  word-wrap: normal;
-  direction: ltr;
-  -webkit-font-smoothing: antialiased;
-}
-         
-    </style>
-    
-    <script>
-$(document).ready(function(){
+              font-family: 'Material Icons';
+              font-style: normal;
+              font-weight: 400;
+              src: url(https://fonts.gstatic.com/s/materialicons/v128/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+         }
+
+       .add 
+          {
+
+              font-family: 'Material Icons';
+              font-weight: normal;
+              font-style: normal;
+              font-size: 24px;
+              line-height: 1;
+              letter-spacing: normal;
+              text-transform: none;
+              display: inline-block;
+              white-space: nowrap;
+              word-wrap: normal;
+              direction: ltr;
+              -webkit-font-smoothing: antialiased;
+           }
+
+
+            .add1 {
+              font-family: 'Material Icons';
+              font-weight: normal;
+              font-style: normal;
+              font-size: 24px;
+              line-height: 1;
+              letter-spacing: normal;
+              text-transform: none;
+              display: inline-block;
+              white-space: nowrap;
+              word-wrap: normal;
+              direction: ltr;
+              -webkit-font-smoothing: antialiased;
+            }
+
+</style>
+<script>
+    $(document).ready(function()
+        {
+
+            $("#general-btn").click(function()
+                {
+
+                    console.log("hi");
+
+                    $("#dept").text("General Vital");
+                     });
+
+            $("#hourly-btn").click(function()
+                {
+                    console.log("hi");
+                    $("#dept").text(" Vital");
+                    });
             
-        
-            $("#general-btn").click(function(){
-                 console.log("hi");
-                $("#dept").text("General Vital");
-            });
-    
-            $("#cardiac-btn1").click(function(){
+            $("#cardiac-btn1").click(function()
+            {
+
                 $("#dept").text("Cardiac Vital");
             });
-    
-            $("#respiratory-btn").click(function(){
+
+            $("#cardiac-btn1").click(function()
+             {
+                $("#dept").text("Cardiac Vital");
+            });
+
+            $("#respiratory-btn").click(function()
+            {
                 $("#dept").text("Respiratory Vital");
             });
-            $("#neuro-btn").click(function(){
+            $("#neuro-btn").click(function()
+            {
                 $("#dept").text("Neuro Vital");
             });
             });
-           
-        </script>
-    <title></title>
-</head>
-<body>
-    <div class="container-fluid">
-        <!-- modal 1 popup  -->
 
+           
+</script>
+
+<title></title>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+
+        <!-- modal 1 popup  -->
         <div class="modal" id="modal1">
             <div class="modal-dialog modal-xl modal-fullscreen-xl-down modal-dialog-scrollable">
                 <div class="modal-content">
                     <div class="m-hd p-1">
-                    <div class="modal-header rounded p-1 modal-hd">
-                        <h5 class="modal-title ps-2"><span id="dept"></span>Cardiac Bounce,David 81 M</h5>
-                        <button class="btn pe-2 pt-0 pb-0 fw-bold" data-bs-dismiss="modal">X</button>
+                        <div class="modal-header rounded p-1 modal-hd">
+                            <h5 class="modal-title ps-2"><span id="dept"></span>Cardiac Bounce,David 81 M</h5>
+                            <button class="btn pe-2 pt-0 pb-0 fw-bold" data-bs-dismiss="modal">X</button>
+                    
+                        </div>
+                    </div>
+
+        <div class="modal-body" >
+            <div class="row">
+                <div class="col"></div>
+                    <div class="col-4">
+                        <form action="" id="myForm">
+
+                        <!-- <div class="mx-auto" style="width: 400px;"> -->
+
+                            <table class="table table-borderless table-sm" id="tb">
+
+                                <tr>
+                                    <td></td>
+                                    <td>Date</td>
+                                    <td>Time</td>
+                                </tr>
+
+                                <tr>
+                                   <td class="text-end">Vital:</td>
+                                    <td><input type="date"></td>
+                                    <td><input type="time"></td>
+                                </tr>
+
+                                <tr>
+                                    <td class="text-end">Temp:</td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td>℃</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-end">Pulse:</td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td>BPM</td>
+                                </tr>
+                                <tr>
+                                   <td class="text-end">S BP:</td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td>mmHg</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-end">D BP:</td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td>mmHg</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-end">RR:</td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td>BPM</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-end">O<sup>2</sup>Sat:</td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td>%</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-end">FiO<sup>2</sup>:</td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-end">PEEP:</td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td>cmH<sub>2</sub>O</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-end">Weight:</td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td>Kg</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="text-end">Height:</td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td>cm</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-end">BMI:</td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td>Kg/m<sup>2</sup></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-end">AVPU:</td>
+                                    <td>
+
+                                        <select name="" id="" class="form-select">
+                                            <option value=""></option>
+
+                                            <option value="">A</option>
+                                            <option value="">B</option>
+                                            <option value="">C</option>
+                                            <option value="">D</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-end">GCS:</td>
+                                    <td>
+                                        <select name="" id="" class="form-select">
+                                            <option value=""></option>
+                                            <option value="">A</option>
+                                            <option value="">B</option>
+                                            <option value="">C</option>
+                                            <option value="">D</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+
+
+                     <div class="col"></div>
+
+                        </div>
+                             <hr>
+
+                            <div class="clearfix">
+
+                                <a href="cardiac.html">  <span class="float-start p-3"><button class="btn clr" id="cancel" onclick="document.getElementById('myForm').reset();">cancel</button></span></a>
+
+                                <a href="inpage.html"> <span class="float-end p-3"><button class="btn clr">submit</button></span></a>
+                            </div>
+                    
+                        </div>
                     </div>
                 </div>
-                    <div class="modal-body" >
-                        <div class="row">
-                            <div class="col"></div>
-                            <div class="col-4">
-    
-                        <form action="" id="myForm">
-                        <!-- <div class="mx-auto" style="width: 400px;"> -->
-                        <table class="table table-borderless table-sm" id="tb">
-                            <tr>
-                                <td></td>
-                                <td>Date</td>
-                                <td>Time</td>
-                            </tr>
-                            <tr>
-                                <td class="text-end">Vital:</td>
-                                <td><input type="date" name="" id="" class="form-control"></td>
-                                <td><input type="time" name="" id="" class="form-control"></td>
-                            </tr>
-                            <tr>
-                                <td class="text-end">Temp:</td>
-                                <td><input type="text" class="form-control"></td>
-                                <td>℃</td>
-                            </tr>
-                            <tr>
-                                <td class="text-end">Pulse:</td>
-                                <td><input type="text" class="form-control"></td>
-                                <td>BPM</td>
-                            </tr>
-                            <tr>
-                                <td class="text-end">S BP:</td>
-                                <td><input type="text" class="form-control"></td>
-                                <td>mmHg</td>
-                            </tr>
-                            <tr>
-                                <td class="text-end">D BP:</td>
-                                <td><input type="text" class="form-control"></td>
-                                <td>mmHg</td>
-                            </tr>
-                            <tr>
-                                <td class="text-end">RR:</td>
-                                <td><input type="text" class="form-control"></td>
-                                <td>BPM</td>
-                            </tr>
-                            <tr>
-                                <td class="text-end">O<sup>2</sup>Sat:</td>
-                                <td><input type="text" class="form-control"></td>
-                                <td>%</td>
-                            </tr>
-                            <tr>
-                                <td class="text-end">FiO<sup>2</sup>:</td>
-                                <td><input type="text" class="form-control"></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td class="text-end">PEEP:</td>
-                                <td><input type="text" class="form-control"></td>
-                                <td>cmH<sub>2</sub>O</td>
-                            </tr>
-                            <tr>
-                                <td class="text-end">Weight:</td>
-                                <td><input type="text" class="form-control"></td>
-                                <td>Kg</td>
-                            </tr>
-                            <tr>
-                                <td class="text-end">Height:</td>
-                                <td><input type="text" class="form-control"></td>
-                                <td><input type="text" class="form-control"></td>
-                                <td>cm</td>
-                            </tr>
-                            <tr>
-                                <td class="text-end">BMI:</td>
-                                <td><input type="text" class="form-control"></td>
-                                <td>Kg/m<sup>2</sup></td>
-                            </tr>
-                            <tr>
-                                <td class="text-end">AVPU:</td>
-                                <td>
-                                    <select name="" id="" class="form-select">
-                                        
-                                        <option value=""></option>
-                                        <option value="">A</option>
-                                        <option value="">B</option>
-                                        <option value="">C</option>
-                                        <option value="">D</option>
-                                    </select>
-                                </td>
-                                
-                            </tr>
-                            <tr>
-                                <td class="text-end">GCS:</td>
-                                <td>
-                                    <select name="" id="" class="form-select">
-                                        <option value=""></option>
-                                        <option value="">A</option>
-                                        <option value="">B</option>
-                                        <option value="">C</option>
-                                        <option value="">D</option>
-                                        
-                                    </select>
-                                </td>
-                               
-                            </tr>
-                      </table>
-                    </form>
-                   
-                </div>
-                <div class="col"></div>
-            </div>
-                    <hr>
-                        <div class="clearfix">
-                            <a href="cardiac.html">  <span class="float-start p-3"><button class="btn clr" 
-                            id="cancel" onclick="document.getElementById('myForm').reset();">cancel</button></span></a>
-                           <a href="inpage.html"> <span class="float-end p-3"><button class="btn clr">submit</button></span></a>
-                        </div>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
+             </div>
+
+
 
 <!-- modal 2 popup  -->
 
         <div class="modal" id="modal2">
+
             <div class="modal-dialog modal-xl modal-fullscreen-xl-down modal-dialog-scrollable">
                 <div class="modal-content">
-                    <div class="m-hd p-1">
-                    <div class="modal-header rounded p-1 modal-hd">
-                        <h5 class="modal-title ps-2"><span id="dept"></span>General Bounce,David 81 M</h5>
-                        <button class="btn pe-2 pt-0 pb-0 fw-bold" data-bs-dismiss="modal">X</button>
+                     <div class="m-hd p-1">
+                        <div class="modal-header rounded p-1 modal-hd">
+                            <h5 class="modal-title ps-2"><span id="dept"></span>General Bounce,David 81 M</h5>
+                            <button class="btn pe-2 pt-0 pb-0 fw-bold" data-bs-dismiss="modal">X</button>
+                        </div>
                     </div>
-                </div>
                     <div class="modal-body" >
-                        <div class="row">
+                         <div class="row">
                             <div class="col"></div>
-                            <div class="col-4">
-    
-                        <form action="" id="myForm">
-                        <!-- <div class="mx-auto" style="width: 400px;"> -->
-                        <table class="table table-borderless table-sm" id="tb">
-                            <tr>
-                                <td></td>
-                                <td>Date</td>
-                                <td>Time</td>
-                            </tr>
-                            <tr>
-                                <td class="text-end">Vital:</td>
-                                <td><input type="date" name="" id="" class="form-control"></td>
-                                <td><input type="time" name="" id="" class="form-control"></td>
-                            </tr>
-                            
-                            <tr>
+                                <div class="col-4">
+                                    <form action="" id="myForm">
+ <!-- <div class="mx-auto" style="width: 400px;"> -->
+                                        <table class="table table-borderless table-sm" id="tb">
+                                            <tr>
+                                                <td></td>
+                                                <td>Date</td>
+                                                <td>Time</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-end">Vital:</td>
+                                                <td><input type="date" name="" id="" class="form-control"></td>
+                                                <td><input type="time" name="" id="" class="form-control"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-end">CPP:</td>
+                                                <td>
+                                                    <select name="" id="" class="form-select">
+                                                        <option value=""></option>
+                                                        <option value="">A</option>
+                                                        <option value="">B</option>
+                                                        <option value="">C</option>
+                                                        <option value="">D</option>
+                                                    </select>
+                                                </td>
                                 
-                                <td class="text-end">CPP:</td>
-
-                                <td>
-                                    <select name="" id="" class="form-select">
-                                        
-                                        <option value=""></option>
-                                        <option value="">A</option>
-                                        <option value="">B</option>
-                                        <option value="">C</option>
-                                        <option value="">D</option>
-                                    </select>
-                                </td>
-                                
-                            </tr>
-                            <tr>
-                                <td class="text-end">ICP:</td>
-
-                                <td>
-                                    <select name="" id="" class="form-select">
-                                        
-                                        <option value=""></option>
-                                        <option value="">A</option>
-                                        <option value="">B</option>
-                                        <option value="">C</option>
-                                        <option value="">D</option>
-                                    </select>
-                                </td>
-                                
-                            </tr>
-                            <tr>
-                                <td class="text-end">Equality:</td>
-
-                                <td>
-                                    <select name="" id="" class="form-select">
-                                        
-                                        <option value=""></option>
-                                        <option value="">A</option>
-                                        <option value="">B</option>
-                                        <option value="">C</option>
-                                        <option value="">D</option>
-                                    </select>
-                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-end">ICP:</td>
+                                                <td>
+                                                    <select name="" id="" class="form-select">
+                                                        <option value=""></option>
+                                                        <option value="">A</option>
+                                                        <option value="">B</option>
+                                                        <option value="">C</option>
+                                                        <option value="">D</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-end">Equality:</td> 
+                                                <td>
+                                                    <select name="" id="" class="form-select">
+                                                        <option value=""></option>
+                                                        <option value="">A</option>
+                                                        <option value="">B</option>
+                                                        <option value="">C</option>
+                                                        <option value="">D</option>
+                                                    </select>
+                                                </td>
                                
-                            </tr>
-                            <tr>
-                                <td class="text-end">Siezure:</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-end">Siezure:</td>
 
-                                <td>
-                                    <select name="" id="" class="form-select">
+                                                <td>
+                                                    <select name="" id="" class="form-select">
                                         
-                                        <option value=""></option>
-                                        <option value="">A</option>
-                                        <option value="">B</option>
-                                        <option value="">C</option>
-                                        <option value="">D</option>
-                                    </select>
-                                </td>
+                                                        <option value=""></option>
+                                                        <option value="">A</option>
+                                                        <option value="">B</option>
+                                                        <option value="">C</option>
+                                                        <option value="">D</option>
+                                                    </select>
+                                                </td>
                                
-                            </tr>
-                            <tr>
-                                <td class="text-end">Eyes:</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-end">Eyes:</td>
 
-                                <td>
-                                    <select name="" id="" class="form-select">
+                                                <td>        
+                                                    <select name="" id="" class="form-select">
                                         
-                                        <option value=""></option>
-                                        <option value="">A</option>
-                                        <option value="">B</option>
-                                        <option value="">C</option>
-                                        <option value="">D</option>
-                                    </select>
-                                </td>
+                                                        <option value=""></option>
+                                                        <option value="">A</option>
+                                                        <option value="">B</option>
+                                                        <option value="">C</option>
+                                                        <option value="">D</option>
+                                                    </select>
+                                                </td>
                                
-                            </tr>
-                            <tr>
-                                <td class="text-end">verbal:</td>
+                                            </tr>
+                                             <tr>
+                                                <td class="text-end">verbal:</td>
 
-                                <td>
-                                    <select name="" id="" class="form-select">
-                                        
-                                        <option value=""></option>
-                                        <option value="">A</option>
-                                        <option value="">B</option>
-                                        <option value="">C</option>
-                                        <option value="">D</option>
-                                    </select>
-                                </td>
+                                                <td>        
+                                                    <select name="" id="" class="form-select">
+                                                        <option value=""></option>
+                                                        <option value="">A</option>
+                                                        <option value="">B</option>
+                                                        <option value="">C</option>
+                                                        <option value="">D</option>
+                                                    </select>
+                                                </td>
                                 
-                            </tr>
-                            <tr>
-                                <td class="text-end">Motor:</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-end">Motor:</td>
 
-                                <td>
-                                    <select name="" id="" class="form-select">
-                                        
-                                        <option value=""></option>
-                                        <option value="">A</option>
-                                        <option value="">B</option>
-                                        <option value="">C</option>
-                                        <option value="">D</option>
-                                    </select>
-                                </td>
+                                                <td>
+                                                    <select name="" id="" class="form-select">
+                                                        <option value=""></option>
+                                                        <option value="">A</option>
+                                                        <option value="">B</option>
+                                                        <option value="">C</option>
+                                                        <option value="">D</option>
+                                                    </select>
+                                                </td>
                                
-                            </tr>
-                            <tr>
-                                <td class="text-end">Height:</td>
-                                <td><input type="text" class="form-control"></td>
-                                <td><input type="text" class="form-control"></td>
-                                <td>cm</td>
-                            </tr>
-                            <tr>
-                                <td class="text-end">BMI:</td>
-                                <td><input type="text" class="form-control"></td>
-                                <td>Kg/m<sup>2</sup></td>
-                            </tr>
-                            <tr>
-                                <td class="text-end">AVPU:</td>
-                                <td>
-                                    <select name="" id="" class="form-select">
-                                        
-                                        <option value=""></option>
-                                        <option value="">A</option>
-                                        <option value="">B</option>
-                                        <option value="">C</option>
-                                        <option value="">D</option>
-                                    </select>
-                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-end">Height:</td>
+                                                <td><input type="text" class="form-control"></td>
+                                                <td><input type="text" class="form-control"></td>
+                                                <td>cm</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-end">BMI:</td>
+                                                <td><input type="text" class="form-control"></td>
+                                                <td>Kg/m<sup>2</sup></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-end">AVPU:</td>
+                                                <td>
+                                                    <select name="" id="" class="form-select">
+                                                        <option value=""></option>
+                                                        <option value="">A</option>
+                                                        <option value="">B</option>
+                                                        <option value="">C</option>
+                                                        <option value="">D</option>
+                                                        </select>
+                                                        </td>
                                 
-                            </tr>
-                            <tr>
-                                <td class="text-end">GCS:</td>
-                                <td>
-                                    <select name="" id="" class="form-select">
-                                        <option value=""></option>
-                                        <option value="">A</option>
-                                        <option value="">B</option>
-                                        <option value="">C</option>
-                                        <option value="">D</option>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-end">GCS:</td>
+                                                <td>
+                                                    <select name="" id="" class="form-select">
+                                                        <option value=""></option>
+                                                        <option value="">A</option>
+                                                        <option value="">B</option>
+                                                        <option value="">C</option>
+                                                        <option value="">D</option>
                                         
-                                    </select>
-                                </td>
+                                                    </select>
+                                                </td>
                                 
-                            </tr>
-                            <tr>
-                                <td class="text-end">Temp:</td>
-                                <td><input type="text" class="form-control"></td>
-                                <td>℃</td>
-                            </tr>
-                            <tr>
-                                <td class="text-end">Pulse:</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-end">Temp:</td>
+                                                <td><input type="text" class="form-control"></td>
+                                                <td>℃</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-end">Pulse:</td>
 
-                                <td>
-                                    <select name="" id="" class="form-select">
+                                                <td>
+                                                <select name="" id="" class="form-select">
                                         
-                                        <option value=""></option>
-                                        <option value="">A</option>
-                                        <option value="">B</option>
-                                        <option value="">C</option>
-                                        <option value="">D</option>
-                                    </select>
-                                </td>
-                             
-                                
-                            </tr>
-                        </table>
-                    </form>
+                                                    <option value=""></option>
+                                                    <option value="">A</option>
+                                                    <option value="">B</option>
+                                                    <option value="">C</option>
+                                                    <option value="">D</option>
+                                                </select>
+                                            </td>
+                                         </tr>
+                                        
+                                   </form>
+                                        </table>
                   
-                </div>
-                <div class="col"></div>
-          </div>
+                                    </div>
+
+                                <div class="col"></div>
+
+                                </div> 
+                            </div>
                         <hr>
+
                         <div class="clearfix">
+
                             <a href="cardiac.html"> <span class="float-start p-3"><button class="btn clr" 
                             id="cancel" onclick="document.getElementById('myForm').reset();">cancel</button></span></a>
                            <a href="inpage.html"> <span class="float-end p-3"><button class="btn clr">submit</button></span></a>
                         </div>
-                    
-                
-            </div>
-</head>
-
-           
-     </div>
-            </div>
-
-        </div>
+                   </div>
+                </div>
         
-    </div>
-
-    <div class="modal" id="modal4">
-        <div class="modal-dialog modal-xl modal-fullscreen-xl-down modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="m-hd p-1">
-                <div class="modal-header rounded p-1 modal-hd">
-                    <h5 class="modal-title ps-2"><span id="dept"></span>Respiratory Bounce,David 81 M</h5>
-                    <button class="btn pe-2 pt-0 pb-0 fw-bold" data-bs-dismiss="modal">X</button>
-                </div>
             </div>
-                <div class="modal-body" >
-                    <div class="row">
-                        <div class="col"></div>
-                        <div class="col-4">
+        <div class="modal" id="modal4">
+            <div class="modal-dialog modal-xl modal-fullscreen-xl-down modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="m-hd p-1">
+                        <div class="modal-header rounded p-1 modal-hd">
+                            <h5 class="modal-title ps-2"><span id="dept"></span>Respiratory Bounce,David 81 M</h5>
+                            <button class="btn pe-2 pt-0 pb-0 fw-bold" data-bs-dismiss="modal">X</button>
 
-                    <form action="" id="myForm">
-                    <!-- <div class="mx-auto" style="width: 400px;"> -->
-                    <table class="table table-borderless table-sm" id="tb">
-                        <tr>
-                            <td></td>
-                            <td>Date</td>
-                            <td>Time</td>
-                        </tr>
-                        <tr>
-                            <td>Vital:</td>
-                            <td><input type="date" name="" id="" class="form-control"></td>
-                            <td><input type="time" name="" id="" class="form-control"></td>
-                        </tr>
+                        </div>
+                    </div>
                         
-                        <tr>
-                            <td>CPP:</td>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col"></div>
+                                <div class="col-4">
+                                    <form action="" id="myForm">
+<!-- <div class="mx-auto" style="width: 400px;"> -->
+                                        <table class="table table-borderless table-sm" id="tb">
+                                            <tr>
+                                                <td></td>
+                                                <td>Date</td>
+                                                <td>Time</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Vital:</td>
+                                                <td><input type="date" name="" id="" class="form-control"></td>
+                                                <td><input type="time" name="" id="" class="form-control"></td>
+                                            </tr>
+                        
+                                            <tr>
+                                                <td>CPP:</td>
+                                                <td>
+                                                    <select name="" id="" class="form-select">
+                                                        <option value=""></option>
+                                                        <option value="">A</option>
+                                                        <option value="">B</option>
+                                                        <option value="">C</option>
+                                                        <option value="">D</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-end">ICP:</td>
 
-                            <td>
-                                <select name="" id="" class="form-select">
+                                                <td>
+                                                    <select name="" id="" class="form-select">
                                     
-                                    <option value=""></option>
-                                    <option value="">A</option>
-                                    <option value="">B</option>
-                                    <option value="">C</option>
-                                    <option value="">D</option>
-                                </select>
-                            </td>
-                           
-                        </tr>
-                        <tr>
-                            <td class="text-end">ICP:</td>
+                                                        <option value=""></option>
+                                                        <option value="">A</option>
+                                                        <option value="">B</option>
+                                                        <option value="">C</option>
+                                                        <option value="">D</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-end">Equality:</td>
 
-                            <td>
-                                <select name="" id="" class="form-select">
+                                                <td>
+                                                    <select name="" id="" class="form-select">
                                     
-                                    <option value=""></option>
-                                    <option value="">A</option>
-                                    <option value="">B</option>
-                                    <option value="">C</option>
-                                    <option value="">D</option>
-                                </select>
-                            </td>
+                                                        <option value=""></option>
+                                                        <option value="">A</option>
+                                                        <option value="">B</option>
+                                                        <option value="">C</option>
+                                                        <option value="">D</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-end">Siezure:</td>
+                                                <td>
+                                                    <select name="" id="" class="form-select">
+                                                        <option value=""></option>
+                                                        <option value="">A</option>
+                                                        <option value="">B</option>
+                                                        <option value="">C</option>
+                                                        <option value="">D</option>
+                                                    </select>
+                                                </td>
                             
-                        </tr>
-                        <tr>
-                            <td class="text-end">Equality:</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-end">Eyes:</td>
 
-                            <td>
-                                <select name="" id="" class="form-select">
-                                    
-                                    <option value=""></option>
-                                    <option value="">A</option>
-                                    <option value="">B</option>
-                                    <option value="">C</option>
-                                    <option value="">D</option>
-                                </select>
-                            </td>
+                                                <td>
+                                                    <select name="" id="" class="form-select">
+                                                        <option value=""></option>
+                                                        <option value="">A</option>
+                                                        <option value="">B</option>
+                                                        <option value="">C</option>
+                                                        <option value="">D</option>
+                                                    </select>
+                                                </td>
                            
-                        </tr>
-                        <tr>
-                            <td class="text-end">Siezure:</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-end">verbal:</td>
 
-                            <td>
-                                <select name="" id="" class="form-select">
+                                                <td>
+                                                    <select name="" id="" class="form-select">
+                                                            
+                                                        <option value=""></option>
+                                                        <option value="">A</option>
+                                                        <option value="">B</option>
+                                                        <option value="">C</option>
+                                                        <option value="">D</option>
+                                                    </select>
+                                                </td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-end">Motor:</td>
+
+                                                <td>
+                                                    <select name="" id="" class="form-select">
                                     
-                                    <option value=""></option>
-                                    <option value="">A</option>
-                                    <option value="">B</option>
-                                    <option value="">C</option>
-                                    <option value="">D</option>
-                                </select>
-                            </td>
+                                                        <option value=""></option>
+                                                        <option value="">A</option>
+                                                        <option value="">B</option>
+                                                        <option value="">C</option>
+                                                        <option value="">D</option>
+                                                    </select>
+                                                </td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-end">Height:</td>
+                                                <td><input type="text" class="form-control"></td>
+                                                <td><input type="text" class="form-control"></td>
+                                                <td>cm</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-end">BMI:</td>
+                                                <td><input type="text" class="form-control"></td>
+                                                <td>Kg/m<sup>2</sup></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-end">AVPU:</td>
+                                                <td>
+                                                    <select name="" id="" class="form-select">
+                                    
+                                                        <option value=""></option>
+                                                        <option value="">A</option>
+                                                        <option value="">B</option>
+                                                        <option value="">C</option>
+                                                        <option value="">D</option>
+                                                    </select>
+                                                </td>
+                           
+                                            </tr>
+                                            <tr>
+                                                <td class="text-end">GCS:</td>
+                                                <td>
+                                                    <select name="" id="" class="form-select">
+                                                        <option value=""></option>
+                                                        <option value="">A</option>
+                                                        <option value="">B</option>
+                                                        <option value="">C</option>
+                                                        <option value="">D</option>
+                                    
+                                                    </select>
+                                                </td>
+                           
+                                            </tr>
+                                            <tr>
+                                                <td class="text-end">Temp:</td>
+                                                <td><input type="text" class="form-control"></td>
+                                                <td>℃</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-end">Pulse:</td>
+
+                                                <td>
+                                                    <select name="" id="" class="form-select">
+                                                            
+                                                        <option value=""></option>
+                                                        <option value="">A</option>
+                                                        <option value="">B</option>
+                                                        <option value="">C</option>
+                                                        <option value="">D</option>
+                                                    </select>
+                                                </td>
                             
-                        </tr>
-                        <tr>
-                            <td class="text-end">Eyes:</td>
-
-                            <td>
-                                <select name="" id="" class="form-select">
-                                    
-                                    <option value=""></option>
-                                    <option value="">A</option>
-                                    <option value="">B</option>
-                                    <option value="">C</option>
-                                    <option value="">D</option>
-                                </select>
-                            </td>
-                           
-                        </tr>
-                        <tr>
-                            <td class="text-end">verbal:</td>
-
-                            <td>
-                                <select name="" id="" class="form-select">
-                                    
-                                    <option value=""></option>
-                                    <option value="">A</option>
-                                    <option value="">B</option>
-                                    <option value="">C</option>
-                                    <option value="">D</option>
-                                </select>
-                            </td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td class="text-end">Motor:</td>
-
-                            <td>
-                                <select name="" id="" class="form-select">
-                                    
-                                    <option value=""></option>
-                                    <option value="">A</option>
-                                    <option value="">B</option>
-                                    <option value="">C</option>
-                                    <option value="">D</option>
-                                </select>
-                            </td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td class="text-end">Height:</td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td>cm</td>
-                        </tr>
-                        <tr>
-                            <td class="text-end">BMI:</td>
-                            <td><input type="text" class="form-control"></td>
-                            <td>Kg/m<sup>2</sup></td>
-                        </tr>
-                        <tr>
-                            <td class="text-end">AVPU:</td>
-                            <td>
-                                <select name="" id="" class="form-select">
-                                    
-                                    <option value=""></option>
-                                    <option value="">A</option>
-                                    <option value="">B</option>
-                                    <option value="">C</option>
-                                    <option value="">D</option>
-                                </select>
-                            </td>
-                           
-                        </tr>
-                        <tr>
-                            <td class="text-end">GCS:</td>
-                            <td>
-                                <select name="" id="" class="form-select">
-                                    <option value=""></option>
-                                    <option value="">A</option>
-                                    <option value="">B</option>
-                                    <option value="">C</option>
-                                    <option value="">D</option>
-                                    
-                                </select>
-                            </td>
-                           
-                        </tr>
-                        <tr>
-                            <td class="text-end">Temp:</td>
-                            <td><input type="text" class="form-control"></td>
-                            <td>℃</td>
-                        </tr>
-                        <tr>
-                            <td class="text-end">Pulse:</td>
-
-                            <td>
-                                <select name="" id="" class="form-select">
-                                    
-                                    <option value=""></option>
-                                    <option value="">A</option>
-                                    <option value="">B</option>
-                                    <option value="">C</option>
-                                    <option value="">D</option>
-                                </select>
-                            </td>
-                            
-                        </tr>
-                    </table>
-                </form>
+                                            </tr>
+                                            </table>
+                                        </form>
               
-            </div>
-            <div class="col"></div>
-        </div>
+                                    </div>
 
-                </div>
-                <hr>
+                                    <div class="col"></div>
+                            </div>
+
+                        </div>
+                    <hr>
+
                     <div class="clearfix">
                         <a href="cardiac.html"> <span class="float-start p-3"><button class="btn clr" 
                         id="cancel" onclick="document.getElementById('myForm').reset();">cancel </button></span></a>
@@ -659,354 +693,350 @@ $(document).ready(function(){
     </div>
 
 
+
 <!-- modal 3 popup  -->
 
     <div class="modal" id="modal3">
         <div class="modal-dialog modal-xl modal-fullscreen-xl-down modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="m-hd p-1">
-                <div class="modal-header rounded p-1 modal-hd">
+
+                    <div class="modal-header rounded p-1 modal-hd">
                     <h5 class="modal-title ps-2"><span id="dept"></span>Neuro Bounce,David 81 M</h5>
                     <button class="btn pe-2 pt-0 pb-0 fw-bold" data-bs-dismiss="modal">X</button>
+                    </div>
                 </div>
-            </div>
+
                 <div class="modal-body" >
                     <div class="row">
                         <div class="col"></div>
                         <div class="col-4">
-
-                    <form action="" id="myForm">
+                             <form action="" id="myForm">
                     <!-- <div class="mx-auto" style="width: 400px;"> -->
-                    <table class="table table-borderless table-sm" id="tb">
-                        <tr>
-                            <td></td>
-                            <td>Date</td>
-                            <td>Time</td>
-                        </tr>
-                        <tr>
-                            <td class="text-end">Vital:</td>
-                            <td><input type="date" name="" id="" class="form-control"></td>
-                            <td><input type="time" name="" id="" class="form-control"></td>
-                        </tr>
-                        
-                        <tr>
+                                <table class="table table-borderless table-sm" id="tb">
+                                    <tr>
+                                        <td></td>
+                                        <td>Date</td>
+                                        <td>Time</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-end">Vital:</td>
+                                        <td><input type="date" name="" id="" class="form-control"></td>
+                                        <td><input type="time" name="" id="" class="form-control"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-end">Pressure:</td>
+                                        <td>
+                                            <select name="" id="" class="form-select">
+                                                <option value=""></option>
+                                                <option value="">A</option>
+                                                <option value="">B</option>
+                                                <option value="">C</option>
+                                                <option value="">D</option>
+                                            </select>
+                                        </td>
                             
-                            <td class="text-end">Pressure:</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-end"> Sound:</td>
 
-                            <td>
-                                <select name="" id="" class="form-select">
-                                    
-                                    <option value=""></option>
-                                    <option value="">A</option>
-                                    <option value="">B</option>
-                                    <option value="">C</option>
-                                    <option value="">D</option>
-                                </select>
-                            </td>
-                            
-                        </tr>
-                        <tr>
-                            <td class="text-end"> Sound:</td>
-
-                            <td>
-                                <select name="" id="" class="form-select">
-                                    
-                                    <option value=""></option>
-                                    <option value="">A</option>
-                                    <option value="">B</option>
-                                    <option value="">C</option>
-                                    <option value="">D</option>
-                                </select>
-                            </td>
+                                        <td>
+                                            <select name="" id="" class="form-select">
+                                                <option value=""></option>
+                                                <option value="">A</option>
+                                                <option value="">B</option>
+                                                <option value="">C</option>
+                                                <option value="">D</option>
+                                            </select>
+                                        </td>
                           
-                        </tr>
-                        <tr>
-                            <td class="text-end">Pain:</td>
-
-                            <td>
-                                <select name="" id="" class="form-select">
+                                    </tr>
+                                    <tr>
+                                        <td class="text-end">Pain:</td>
+                                        <td>
+                                            <select name="" id="" class="form-select">
                                     
-                                    <option value=""></option>
-                                    <option value="">A</option>
-                                    <option value="">B</option>
-                                    <option value="">C</option>
-                                    <option value="">D</option>
-                                </select>
-                            </td>
+                                                <option value=""></option>
+                                                <option value="">A</option>
+                                                <option value="">B</option>
+                                                <option value="">C</option>
+                                                <option value="">D</option>
+                                            </select>
+                                        </td>
                            
-                        </tr>
-                        <tr>
-                            <td class="text-end">Ears:</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-end">Ears:</td>
 
-                            <td>
-                                <select name="" id="" class="form-select">
+                                        <td>
+                                            <select name="" id="" class="form-select">
                                     
-                                    <option value=""></option>
-                                    <option value="">A</option>
-                                    <option value="">B</option>
-                                    <option value="">C</option>
-                                    <option value="">D</option>
-                                </select>
-                            </td>
+                                                <option value=""></option>
+                                                <option value="">A</option>
+                                                <option value="">B</option>
+                                                <option value="">C</option>
+                                                <option value="">D</option>
+                                            </select>
+                                         </td>
                             
-                        </tr>
-                        <tr>
-                            <td class="text-end">Eyes:</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-end">Eyes:</td>
 
-                            <td>
-                                <select name="" id="" class="form-select">
+                                        <td>
+                                            <select name="" id="" class="form-select">
                                     
-                                    <option value=""></option>
-                                    <option value="">A</option>
-                                    <option value="">B</option>
-                                    <option value="">C</option>
-                                    <option value="">D</option>
-                                </select>
-                            </td>
+                                                <option value=""></option>
+                                                <option value="">A</option>
+                                                <option value="">B</option>
+                                                <option value="">C</option>
+                                                <option value="">D</option>
+                                            </select>
+                                        </td>
                            
-                        </tr>
-                        <tr>
-                            <td class="text-end">verbal:</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-end">verbal:</td>
 
-                            <td>
-                                <select name="" id="" class="form-select">
+                                            <td>
+                                                 <select name="" id="" class="form-select">
                                     
-                                    <option value=""></option>
-                                    <option value="">A</option>
-                                    <option value="">B</option>
-                                    <option value="">C</option>
-                                    <option value="">D</option>
-                                </select>
-                            </td>
+                                                    <option value=""></option>
+                                                    <option value="">A</option>
+                                                    <option value="">B</option>
+                                                    <option value="">C</option>
+                                                    <option value="">D</option>
+                                                </select>
+                                            </td>
                             
-                        </tr>
-                        <tr>
-                            <td class="text-end">Motor:</td>
-
-                            <td>
-                                <select name="" id="" class="form-select">
+                                    </tr>
+                                    <tr>
+                                        <td class="text-end">Motor:</td>
+                                        <td>
+                                            <select name="" id="" class="form-select">
                                     
-                                    <option value=""></option>
-                                    <option value="">A</option>
-                                    <option value="">B</option>
-                                    <option value="">C</option>
-                                    <option value="">D</option>
-                                </select>
-                            </td>
+                                                <option value=""></option>
+                                                <option value="">A</option>
+                                                <option value="">B</option>
+                                                <option value="">C</option>
+                                                <option value="">D</option>
+                                            </select>
+                                         </td>
                            
-                        </tr>
-                        <tr>
-                            <td class="text-end">Height:</td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td>cm</td>
-                        </tr>
-                        <tr>
-                            <td class="text-end">BMI:</td>
-                            <td><input type="text" class="form-control"></td>
-                            <td>Kg/m<sup>2</sup></td>
-                        </tr>
-                        <tr>
-                            <td class="text-end">Testable:</td>
-                            <td>
-                                <select name="" id="" class="form-select">
+                                    </tr>
+                                    <tr>
+                                        <td class="text-end">Height:</td>
+                                        <td><input type="text" class="form-control"></td>
+                                        <td><input type="text" class="form-control"></td>
+                                        <td>cm</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-end">BMI:</td>
+                                        <td><input type="text" class="form-control"></td>
+                                        <td>Kg/m<sup>2</sup></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-end">Testable:</td>
+                                        <td>
+                                            <select name="" id="" class="form-select">
                                     
-                                    <option value=""></option>
-                                    <option value="">A</option>
-                                    <option value="">B</option>
-                                    <option value="">C</option>
-                                    <option value="">D</option>
-                                </select>
-                            </td>
+                                                <option value=""></option>
+                                                <option value="">A</option>
+                                                <option value="">B</option>
+                                                <option value="">C</option>
+                                                <option value="">D</option>
+                                            </select>
+                                        </td>
                            
-                        </tr>
-                        <tr>
-                            <td class="text-end">MAP:</td>
-                            <td>
-                                <select name="" id="" class="form-select">
-                                    <option value=""></option>
-                                    <option value="">A</option>
-                                    <option value="">B</option>
-                                    <option value="">C</option>
-                                    <option value="">D</option>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-end">MAP:</td>
+                                        <td>
+                                            <select name="" id="" class="form-select">
+                                                <option value=""></option>
+                                                <option value="">A</option>
+                                                <option value="">B</option>
+                                                <option value="">C</option>
+                                                <option value="">D</option>
                                     
-                                </select>
-                            </td>
+                                            </select>
+                                        </td>
                           
-                        </tr>
-                        <tr>
-                            <td class="text-end">Legs:</td>
-                            <td><input type="text" class="form-control"></td>
-                            <td>℃</td>
-                        </tr>
-                        <tr>
-                            <td class="text-end">Arms:</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-end">Legs:</td>
+                                            <td><input type="text" class="form-control"></td>
+                                            <td>℃</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-end">Arms:</td>
 
-                            <td>
-                                <select name="" id="" class="form-select">
+                                            <td>
+                                                <select name="" id="" class="form-select">
                                     
-                                    <option value=""></option>
-                                    <option value="">A</option>
-                                    <option value="">B</option>
-                                    <option value="">C</option>
-                                    <option value="">D</option>
-                                </select>
-                            </td>
+                                                    <option value=""></option>
+                                                    <option value="">A</option>
+                                                    <option value="">B</option>
+                                                    <option value="">C</option>
+                                                    <option value="">D</option>
+                                                </select>
+                                            </td>
                             
-                        </tr>
-                    </table>
-                </form>
+                                        </tr>
+                                    </table>
+                                </form>
                 <!-- </div> -->
-            </div>
-            <div class="col"></div>
-        </div>
+                            </div>
+
+                            <div class="col"></div>
+                    </div>
 
                 </div>
                 <hr>
-                    <div class="clearfix">
-                        <a href="cardiac.html"> <span class="float-start p-3"><button class="btn clr" 
-                        id="cancel" onclick="document.getElementById('myForm').reset();">cancel</button></span></a>
-                       <a href="inpage.html"> <span class="float-end p-3"><button class="btn clr">submit</button></span></a>
-                    </div>
+
+                 <div class="clearfix">
+
+                    <a href="cardiac.html"> <span class="float-start p-3"><button class="btn clr" id="cancel" onclick="document.getElementById('myForm').reset();">cancel</button></span></a>
+                    <a href="inpage.html"> <span class="float-end p-3"><button class="btn clr">submit</button></span></a>
+                </div>
                 
             </div>
         </div>
     </div>  
+
             
-</head>
-<body>
+
     <div class="container-fluid">
-        <!-- modal popup  -->
-        <div class="modal" id="modal1">
+       <!-- modal popup  -->
+       <div class="modal" id="modal1">
             <div class="modal-dialog modal-xl modal-fullscreen-xl-down modal-dialog-scrollable">
                 <div class="modal-content">
                     <div class="m-hd p-1">
-                    <div class="modal-header rounded p-1 m">
-
-                        <h5 class="modal-title ps-2"><span id="de"></span></h5>
-                        <button class="btn pe-2 pt-0 pb-0 fw-bold" data-bs-dismiss="modal">X</button>
-                    </div>
+                        <div class="modal-header rounded p-1 m">
+                            <h5 class="modal-title ps-2"><span id="de"></span></h5><button class="btn pe-2 pt-0 pb-0 fw-bold" data-bs-dismiss="modal">X</button>
+                        </div>
                     
-                </div>
-                    <div class="modal-body" >
-                        <div class="row">
-                            <div class="col"></div>
-                            <div class="col-4">
-    
-                        <form action="" id="top">
+                   </div>
+
+
+            <div class="modal-body" >
+                <div class="row">
+                    <div class="col"></div>
+                        <div class="col-4">
+                            <form action="" id="top">
+
+
                         <!-- <div class="mx-auto" style="width: 400px;"> -->
-                            <table>
-                                <h5 class="modal-title ps-2"><span id="dept">****</span>-Bounce,David 81 M</h5>
-                        <button class="btn pe-2 pt-0 pb-0 fw-bold" data-bs-dismiss="modal">X</button>
-                    </div>
-                </div>
-                
-                    <div class="modal-body" >
-                        <div class="row">
-                            <div class="col"></div>
-                            <div class="col-4">
-    
-                        <form action="" id="myForm">
+                                <table>
+                                    <h5 class="modal-title ps-2"><span id="dept"></span>-Bounce,David 81 M</h5><button class="btn pe-2 pt-0 pb-0 fw-bold" data-bs-dismiss="modal">X</button></div>
+                        </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col"></div>
+                                        <div class="col-4">
+                                            <form action="" id="myForm">
+
                         <!-- <div class="mx-auto" style="width: 400px;"> -->
-                        <table class="table table-borderless table-sm" id="tb">
-                            <tr>
-                                <td></td>
-                                <td>Date</td>
-                                <td>Time</td>
-                            </tr>
-                            <tr>
-                                <td class="text-end">Vital:</td>
-                                <td><input type="date" name="" id="" class="form-control"></td>
-                                <td><input type="time" name="" id="" class="form-control"></td>
-                            </tr>
-                            <tr>
-                                <td class="text-end">Temp:</td>
-                                <td><input type="text" class="form-control"></td>
-                                <td>℃</td>
-                            </tr>
-                            <tr>
-                                <td class="text-end">Pulse:</td>
-                                <td><input type="text" class="form-control"></td>
-                                <td>BPM</td>
-                            </tr>
-                            <tr>
-                                <td class="text-end">S BP:</td>
-                                <td><input type="text" class="form-control"></td>
-                                <td>mmHg</td>
-                            </tr>
-                            <tr>
-                                <td class="text-end">D BP:</td>
-                                <td><input type="text" class="form-control"></td>
-                                <td>mmHg</td>
-                            </tr>
-                            <tr>
-                                <td class="text-end">RR:</td>
-                                <td><input type="text" class="form-control"></td>
-                                <td>BPM</td>
-                            </tr>
-                            <tr>
-                                <td class="text-end">O<sup>2</sup>Sat:</td>
-                                <td><input type="text" class="form-control"></td>
-                                <td>%</td>
-                            </tr>
-                            <tr>
-                                <td class="text-end">FiO<sup>2</sup>:</td>
-                                <td><input type="text" class="form-control"></td>
+                                                 <table class="table table-borderless table-sm" id="tb">
+                                                     <tr>
+                                                        <td></td>
+                                                         <td>Date</td>
+                                                        <td>Time</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-end">Vital:</td>
+                                                        <td><input type="date" name="" id="" class="form-control"></td>
+                                                        <td><input type="time" name="" id="" class="form-control"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-end">Temp:</td>
+                                                        <td><input type="text" class="form-control"></td>
+                                                        <td>℃</td>
+                                                    </tr>
+                                                    <tr>
+                                                         <td class="text-end">Pulse:</td>
+                                                        <td><input type="text" class="form-control"></td>
+                                                        <td>BPM</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-end">S BP:</td>
+                                                        <td><input type="text" class="form-control"></td>
+                                                        <td>mmHg</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-end">D BP:</td>
+                                                        <td><input type="text" class="form-control"></td>
+                                                        <td>mmHg</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-end">RR:</td>
+                                                        <td><input type="text" class="form-control"></td>
+                                                        <td>BPM</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-end">O<sup>2</sup>Sat:</td>
+                                                        <td><input type="text" class="form-control"></td>
+                                                        <td>%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-end">FiO<sup>2</sup>:</td>
+                                                        <td><input type="text" class="form-control"></td>
+                                                            
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-end">PEEP:</td>
+                                                        <td><input type="text" class="form-control"></td>
+                                                        <td>cmH<sub>2</sub>O</td>
+                                                        </tr>
+                                                    <tr>
+                                                        <td class="text-end">Weight:</td>
+                                                        <td><input type="text" class="form-control"></td>
+                                                        <td>Kg</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-end">Height:</td>
+                                                        <td><input type="text" class="form-control"></td>
+                                                        <td>cm</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-end">BMI:</td>
+                                                        <td><input type="text" class="form-control"></td>
+                                                        <td>Kg/m<sup>2</sup></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-end">AVPU:</td>
+                                                        <td>
+                                                            <select name="" id="" class="form-select">
+                                                                <option value=""></option>
+                                                                <option value="">Alert</option>
+                                                                <option value="">Verbal</option>
+                                                                <option value="">Pain</option>
+                                                                <option value="">Unresponsive</option>
+                                                            </select>
+                                                        </td>
                                 
-                            </tr>
-                            <tr>
-                                <td class="text-end">PEEP:</td>
-                                <td><input type="text" class="form-control"></td>
-                                <td>cmH<sub>2</sub>O</td>
-                            </tr>
-                            <tr>
-                                <td class="text-end">Weight:</td>
-                                <td><input type="text" class="form-control"></td>
-                                <td>Kg</td>
-                            </tr>
-                            <tr>
-                                <td class="text-end">Height:</td>
-                                <td><input type="text" class="form-control"></td>
-                                <td>cm</td>
-                            </tr>
-                            <tr>
-                                <td class="text-end">BMI:</td>
-                                <td><input type="text" class="form-control"></td>
-                                <td>Kg/m<sup>2</sup></td>
-                            </tr>
-                            <tr>
-                                <td class="text-end">AVPU:</td>
-                                <td>
-                                    <select name="" id="" class="form-select">
-                                        <option value=""></option>
-                                        <option value="">Alert</option>
-                                        <option value="">Verbal</option>
-                                        <option value="">Pain</option>
-                                        <option value="">Unresponsive</option>
-                                    </select>
-                                </td>
+                                                      </tr>
+                                                       <tr>
+                                                            <td class="text-end">GCS:</td>
+                                                            <td>
+                                                                <select name="" id="" class="form-select">
+                                                                    <option value=""></option>
+                                                                    <option value="">A</option>
+                                                                    <option value="">B</option>
+                                                                    <option value="">C</option>     
+                                                                </select>
+                                                            </td>
                                 
-                            </tr>
-                            <tr>
-                                <td class="text-end">GCS:</td>
-                                <td>
-                                    <select name="" id="" class="form-select">
-                                        <option value=""></option>
-                                        <option value="">A</option>
-                                        <option value="">B</option>
-                                        <option value="">C</option>     
-                                    </select>
-                                </td>
-                                
-                            </tr>
-                        </table>    
-                    </form>
+                                                         </tr>
+                                                    </table>    
+                                                </form>
                    
-                </div>
-                <div class="col"></div>
-         </div>
+                                          </div>
+
+                                         <div class="col"></div>
+                                  </div>
     
-                    </div>
+                      </div>
                     <hr>
                         <div class="clearfix">
                             <a href="cardiac.html"><span class="float-start p-3"><button class="btn clr" 
@@ -1073,9 +1103,6 @@ $(document).ready(function(){
                      aria-controls="cardiac" aria-selected="false">Cardiac</button>
                 </li>
 
-
-
-                
                 <li class="nav-item">
                     <button class="nav-link text-secondary 
                     border border-bottom-0 me-1 mt-2" id="respiratory-tab"
@@ -1092,9 +1119,7 @@ $(document).ready(function(){
                 </li>
             </ul>
 
-          
-
-            <div>
+             <div>
                  <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="general" 
                     role="tabpanel" aria-labelledby="general-tab">
@@ -1122,6 +1147,626 @@ $(document).ready(function(){
                 <i class="add ">add</i></button>
             </div>
 
+
+
+                <div class="tab-pane fade" id="hourly" 
+                role="tabpanel" aria-labelledby="hourly-tab">
+                <button id="hourly-btn" class="btn border mt-2 pb-0" 
+                style="margin-left: 112px;" 
+                data-bs-toggle="modal" data-bs-target="#modal1">
+                <i class="add1"><table class="table">
+
+                <thead>
+
+                <tr>
+
+                <th></th>
+
+
+   
+     <th scope="col" style="padding:15px 25px 30px 5px;">07</th>
+     <th style="padding:15px 25px 30px 5px;">08</th>
+
+     <th style="padding:15px 25px 30px 5px;">09</th>
+     <th style="padding:15px 25px 30px 5px;">10</th>
+     <th style="padding:15px 25px 30px 5px;">11</th>
+     <th style="padding:15px 25px 30px 5px;">12</th>
+     <th style="padding:15px 25px 30px 5px;">13</th>
+     <th style="padding:15px 25px 30px 5px;">14</th>
+     <th style="padding:15px 25px 30px 5px;">15</th>
+     <th style="padding:15px 25px 30px 5px;">16</th>
+     <th style="padding:15px 25px 30px 5px;">17</th>
+     <th style="padding:15px 25px 30px 5px;">18</th>
+     <th style="padding:15px 25px 30px 5px;">19</th>
+     <th style="padding:15px 25px 30px 5px;">20</th>
+     <th style="padding:15px 25px 30px 5px;">21</th>
+     <th style="padding:15px 25px 30px 5px;">22</th>
+     <th style="padding:15px 25px 30px 5px;">23</th>
+     <th style="padding:15px 25px 30px 5px;">24</th>
+     <th style="padding:15px 25px 30px 5px;">01</th>
+     <th style="padding:15px 25px 30px 5px;">02</th>
+     <th style="padding:15px 25px 30px 5px;">03</th>
+     <th style="padding:15px 25px 30px 5px;">04</th>
+     <th style="padding:15px 25px 30px 5px;">05</th>
+
+     <th style="padding:15px 25px 30px 5px;">06</th>
+     </thead>
+     
+  </tr>
+
+  
+  
+  <tr>
+     <td style="color:red">PUPILS</td>
+     <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    
+</tr>
+  <tr>
+    <td>Reaction R</td>
+    
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    
+    
+  </tr>
+  <tr>
+
+  <tr>
+    <td>Reaction L</td>
+     <td></td>
+    
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    
+
+    
+  </tr>
+  <tr>
+    <td>Equality</td>
+     <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    
+    
+  </tr>
+ 
+
+
+
+
+
+        <tr>
+
+    
+
+   
+    
+    
+   <td scope="col" >Size L</td>
+     <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</thead>
+    
+    
+  </tr>
+
+
+<tr>
+ 
+  
+   
+    <td>Size R</td>
+    
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    
+  </tr>
+  
+        <tr>
+         <td style="color:red">COMA SCALE</td>
+     
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    
+  </tr>
+  <tr>
+    <td>Eyes</td>
+    
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    </tr>
+    <tr>
+    <td>Verbal</td>
+    
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+ <tr>
+    <td>Motor</td>
+     
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+ <tr>
+    <td>Coma  Scare Score</td>
+    
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+ <tr>
+      <h1> <td style="color:red">LIMBS</td></h1>
+     
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+
+ <tr>
+    <td>MovementArmsL</td>
+     
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+ <tr>
+    <td>MovementArmsR</td>
+    
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+ <tr>
+    <td>MovementLegsL</td>
+     
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+ <tr>
+    <td>MovementLegsR</td>
+     
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+ <tr>
+    <td>Strength Arms L</td>
+     
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+ <tr>
+    <td>Strength Arms R</td>
+     
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+ <tr>
+    <td>StrengthLegsL</td>
+    
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+</thead>
+    
+</table></i></button>
+                </div>
+
+
+
                     <div class="tab-pane fade" id="neuro" 
                     role="tabpanel" aria-labelledby="neuro-tab">
                     <button id="neuro-btn" class="btn border mt-2 pb-0" 
@@ -1138,10 +1783,15 @@ $(document).ready(function(){
 
         
         <div>
-            <ul class="nav nav-tabs mt-3" style="pointer-events: none;">
-                <li class="nav-item">
-                    <button class="nav-link text-secondary active border border-bottom-0 me-1 mt-2">Hourly</button>
+            <ul class="nav nav-tabs mt-3" >
+                 <li class="nav-item">
+                    <button id="vt-tab" class="nav-link active text-secondary 
+                    border border-bottom-0 me-1 mt-2" data-bs-toggle="tab" 
+                    data-bs-target="#tab1" aria-selected="true">Hourly</button>
                 </li>
+
+
+
                 <li class="nav-item">
                     <button class="nav-link text-secondary border border-bottom-0 me-1 mt-2">All</button>
                 </li>
@@ -1149,7 +1799,7 @@ $(document).ready(function(){
         </div>
      
     </div>
-    <hr>
+    
     <script>
         // display date
         let dt = new Date();
@@ -1193,8 +1843,614 @@ $(document).ready(function(){
         });
 
     </script>
+   
+</head>
+<table class="table">
+     <thead>
 
-    <a href="taskvital.html">cancel</a>
+        <tr>
+
+    <th></th>
+
+   
+     <th scope="col" style="padding:15px 25px 30px 5px;">07</th>
+     <th style="padding:15px 25px 30px 5px;">08</th>
+
+     <th style="padding:15px 25px 30px 5px;">09</th>
+     <th style="padding:15px 25px 30px 5px;">10</th>
+     <th style="padding:15px 25px 30px 5px;">11</th>
+     <th style="padding:15px 25px 30px 5px;">12</th>
+     <th style="padding:15px 25px 30px 5px;">13</th>
+     <th style="padding:15px 25px 30px 5px;">14</th>
+     <th style="padding:15px 25px 30px 5px;">15</th>
+     <th style="padding:15px 25px 30px 5px;">16</th>
+     <th style="padding:15px 25px 30px 5px;">17</th>
+     <th style="padding:15px 25px 30px 5px;">18</th>
+     <th style="padding:15px 25px 30px 5px;">19</th>
+     <th style="padding:15px 25px 30px 5px;">20</th>
+     <th style="padding:15px 25px 30px 5px;">21</th>
+     <th style="padding:15px 25px 30px 5px;">22</th>
+     <th style="padding:15px 25px 30px 5px;">23</th>
+     <th style="padding:15px 25px 30px 5px;">24</th>
+     <th style="padding:15px 25px 30px 5px;">01</th>
+     <th style="padding:15px 25px 30px 5px;">02</th>
+     <th style="padding:15px 25px 30px 5px;">03</th>
+     <th style="padding:15px 25px 30px 5px;">04</th>
+     <th style="padding:15px 25px 30px 5px;">05</th>
+
+     <th style="padding:15px 25px 30px 5px;">06</th>
+     </thead>
+     
+  </tr>
+
+  
+  
+  <tr>
+     <td style="color:red">PUPILS</td>
+     <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    
+</tr>
+  <tr>
+    <td>Reaction R</td>
+    
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    
+    
+  </tr>
+  <tr>
+
+  <tr>
+    <td>Reaction L</td>
+     <td></td>
+    
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    
+
+    
+  </tr>
+  <tr>
+    <td>Equality</td>
+     <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    
+    
+  </tr>
+ 
+
+
+
+
+
+        <tr>
+
+    
+
+   
+    
+    
+   <td scope="col" >Size L</td>
+     <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</thead>
+    
+    
+  </tr>
+
+
+<tr>
+ 
+  
+   
+    <td>Size R</td>
+    
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    
+  </tr>
+  
+        <tr>
+         <td style="color:red">COMA SCALE</td>
+     
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    
+  </tr>
+  <tr>
+    <td>Eyes</td>
+    
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    </tr>
+    <tr>
+    <td>Verbal</td>
+    
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+ <tr>
+    <td>Motor</td>
+     
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+ <tr>
+    <td>Coma  Scare Score</td>
+    
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+ <tr>
+      <h1> <td style="color:red">LIMBS</td></h1>
+     
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+
+ <tr>
+    <td>MovementArmsL</td>
+     
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+ <tr>
+    <td>Movement Arms R</td>
+    
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+ <tr>
+    <td>MovementLegsL</td>
+     
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+ <tr>
+    <td>MovementLegsR</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+ <tr>
+    <td>Strength Arms L</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+ <tr>
+    <td>Strength Arms R</td>
+     
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+ <tr>
+    <td>StrengthLegsL</td>
+    
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+</thead>
+    
+</table>
+   <!--  <a href="taskvital.html">cancel</a> -->
  
 </body>
 </html>
